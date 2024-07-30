@@ -40,6 +40,17 @@
                 "showDetailsButton":true,
                 "displayOrder":1
             },
+            
+            "notificacionGes": {
+		        "translationKey":"DASHBOARD_TITLE_NOTIFICACION_GES",
+                "type": "custom",
+                "displayOrder": 3,
+                "config": {
+                    "title": "Notificacion GES",
+                    "template": "<notificacion-ges section='config' patient='patient'></notificacion-ges>"
+                }
+            },
+            
             "navigationLinksControl":{  
                 "translationKey":"DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
                 "type":"navigationLinksControl",
