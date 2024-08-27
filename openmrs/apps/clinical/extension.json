@@ -67,6 +67,19 @@
     "order": 1,
     "requiredPrivilege": "app:clinical"
   },
+  "bahmniClinicalPatientsCustomNotifications": {
+    "id": "bahmni.clinical.patients.custom.notifications",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "translationKey": "MODULE_LABEL_NOTIFICATIONS_KEY",
+      "templateUrl": "/bahmni_config/openmrs/apps/clinical/customQueues/notifications.html",
+      "view": "custom"
+    },
+    "label": "Notifications",
+    "order": 4,
+    "requiredPrivilege": "app:clinical"
+  },  
   "bahmniClinicalPatientsSearchActivePatientsForPrograms": {
     "id": "bahmni.clinical.patients.search.activePatients",
     "extensionPointId": "org.bahmni.patient.search",
@@ -196,7 +209,41 @@
     "label": "Medications",
     "translationKey":"MEDICATIONS_BOARD_LABEL_KEY",
     "extensionParams":{
-      "tabConfigName": "allMedicationTabConfig"
+      "tabConfigName": "allMedicationTabConfig",
+      "sections": {
+        "basicDetails":{  
+          "translationKey":"DASHBOARD_TITLE_BASIC_DETAILS_KEY",
+          "type": "observation",
+          "isObservation": true,
+          "displayOrder": 1,
+          "dashboardConfig": {
+            "conceptNames":[  
+              "Height (cm)",
+              "Weight (kg)"
+            ],
+            "displayNameType": "FSN",
+            "showDetailsButton": true,
+            "numberOfVisits":2
+          },
+          "expandedViewConfig": { 
+            "conceptNames":[  
+              "Height (cm)",
+              "Weight (kg)",
+              "Body mass index",
+              "BMI STATUS"
+            ],
+            "scope": "latest",
+            "showDetailsButton": true,
+            "displayNameType": "FSN",
+            "pivotTable": {}
+          },
+          "hideEmptyDisplayControl": true
+        },
+        "allergies": {
+          "type": "allergies",
+          "displayOrder": 2
+        }
+      }
     },
     "url": "treatment",
     "icon": "fa-user-md",
