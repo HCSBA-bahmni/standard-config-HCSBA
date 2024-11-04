@@ -29,13 +29,6 @@
                 "additionalPatientInformation": {
                     "title": "Additional Patient Information",
                     "attributes": [
-                        "distanceFromCenter",
-                        "isUrban",
-                        "cluster",
-                        "RationCard",
-                        "familyIncome",
-                        "debt",
-                        "cluster",
                         "email"
                     ]
                 },
@@ -59,7 +52,7 @@
             },
 
             "autoCompleteFields":["familyName", "caste"],
-            "defaultIdentifierPrefix": "GAN",
+            "defaultIdentifierPrefix": "RUT*",
             "defaultVisitType": "OPD",
             "searchByIdForwardUrl": "/patient/{{patientUuid}}",
             "showMiddleName": true,
@@ -117,6 +110,11 @@
                     "label": "Phone Number",
                     "placeholder": "Phone Number",
                     "fields": ["phoneNumber","alternatePhoneNumber"]
+                },
+                "socialAttributes": {
+                    "label": "Nombre Social",
+                    "placeholder": "Nombre Social",
+                    "fields": ["givenNameLocal", "middleNameLocal", "familyNameLocal"]
                 }
             },
             "addressHierarchy": {
