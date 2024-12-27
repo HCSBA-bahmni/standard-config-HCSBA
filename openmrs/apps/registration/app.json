@@ -29,6 +29,13 @@
                 "additionalPatientInformation": {
                     "title": "Additional Patient Information",
                     "attributes": [
+                        "distanceFromCenter",
+                        "isUrban",
+                        "cluster",
+                        "RationCard",
+                        "familyIncome",
+                        "debt",
+                        "cluster",
                         "email"
                     ]
                 },
