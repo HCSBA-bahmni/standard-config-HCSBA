@@ -11,7 +11,6 @@ type = KEYVALUEJSON
 [o:openmrs:p:bahmni:r:default-customization-of-adt-app]
 file_filter = openmrs/i18n/adt/locale_<lang>.json
 source_file = openmrs/i18n/adt/locale_en.json
-file_filter = translations/bahmni.default-customization-of-adt-app/<lang>.json
 source_lang = en
 type = KEYVALUEJSON
 
