@@ -44,7 +44,7 @@ source_file = openmrs/i18n/registration/locale_en.json
 source_lang = en
 type = KEYVALUEJSON
 
-[o:openmrs:p:bahmni:r:default-customization-of-ipd-app]
+[o:openmrs:p:bahmni:r:ipd-frontend]
 file_filter = openmrs/i18n/ipd/locale_<lang>.json
 source_file = openmrs/i18n/ipd/locale_en.json
 source_lang = en
