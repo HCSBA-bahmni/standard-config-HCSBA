@@ -24,6 +24,11 @@ jobs:
       HELM_CHART_PATH: package/helm
     steps:
       - uses: actions/checkout@v2
+      - name: Pull Translations from Transifex
+        run: |
+          bash .github/scripts/transifex.sh pull -l es
+        env:
+          TX_TOKEN: ${{ secrets.TX_TOKEN }}
       - name: Set env.ARTIFACT_VERSION
         run: |
           wget -q https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/main/setArtifactVersion.sh && chmod +x setArtifactVersion.sh
