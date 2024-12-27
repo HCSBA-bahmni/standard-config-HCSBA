@@ -5,7 +5,6 @@ minimum_perc = 40
 [o:openmrs:p:bahmni:r:default-customization-of-admin-app]
 file_filter = openmrs/i18n/admin/locale_<lang>.json
 source_file = openmrs/i18n/admin/locale_en.json
-file_filter = translations/bahmni.default-customization-of-admin-app/<lang>.json
 source_lang = en
 type = KEYVALUEJSON
 
@@ -43,6 +42,12 @@ type = KEYVALUEJSON
 [o:openmrs:p:bahmni:r:default-customization-of-registration-app]
 file_filter = openmrs/i18n/registration/locale_<lang>.json
 source_file = openmrs/i18n/registration/locale_en.json
+source_lang = en
+type = KEYVALUEJSON
+
+[o:openmrs:p:bahmni:r:default-customization-of-ipd-app]
+file_filter = openmrs/i18n/ipd/locale_<lang>.json
+source_file = openmrs/i18n/ipd/locale_en.json
 source_lang = en
 type = KEYVALUEJSON
 
