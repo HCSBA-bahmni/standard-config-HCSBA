@@ -14,7 +14,7 @@ source_file = openmrs/i18n/adt/locale_en.json
 source_lang = en
 type = KEYVALUEJSON
 
-[o:openmrs:p:bahmni:r:default-customization-of-clinical-app]
+[o:openmrs:p:bahmni:r:clinical-app]
 file_filter = openmrs/i18n/clinical/locale_<lang>.json
 source_file = openmrs/i18n/clinical/locale_en.json
 source_lang = en
