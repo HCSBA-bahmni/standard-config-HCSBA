@@ -55,3 +55,9 @@ file_filter = openmrs/i18n/ot/locale_<lang>.json
 source_file = openmrs/i18n/ot/locale_en.json
 source_lang = en
 type = KEYVALUEJSON
+
+[o:openmrs:p:bahmni:r:appointments-frontend-app]
+file_filter = openmrs/i18n/appointments/locale_<lang>.json
+source_file = openmrs/i18n/appointments/locale_en.json
+source_lang = en
+type = KEYVALUEJSON
