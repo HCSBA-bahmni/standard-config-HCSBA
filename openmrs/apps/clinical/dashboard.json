@@ -225,7 +225,6 @@
             "flowsheet": {
 		"translationKey": "DASHBOARD_TITLE_VITALS_FLOW_KEY",
                 "type": "flowSheet",
-                "title": "Vitals Flow Sheet",
                 "displayOrder": 12,
                 "dashboardConfig": {
                     "latestCount": "5",
