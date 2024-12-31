@@ -19,6 +19,7 @@
                 ]
             },
             "allergies": {
+		"translationKey":"DASHBOARD_TITLE_PATIENT_ALLERGIES_KEY",
                 "type":"allergies",
                 "displayOrder": 2
             },
