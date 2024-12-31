@@ -19,6 +19,7 @@
                 ]
             },
             "allergies": {
+		"translationKey":"DASHBOARD_TITLE_PATIENT_ALLERGIES_KEY",
                 "type":"allergies",
                 "displayOrder": 2
             },
@@ -42,7 +43,7 @@
             },
             
             "notificacionGes": {
-		        "translationKey":"DASHBOARD_TITLE_NOTIFICACION_GES",
+		"translationKey":"DASHBOARD_TITLE_NOTIFICACION_GES",
                 "type": "custom",
                 "displayOrder": 3,
                 "config": {
@@ -222,6 +223,7 @@
                 "hideEmptyDisplayControl": true
             },
             "flowsheet": {
+		"translationKey": "DASHBOARD_TITLE_VITALS_FLOW_KEY",
                 "type": "flowSheet",
                 "title": "Vitals Flow Sheet",
                 "displayOrder": 12,
