@@ -32,7 +32,7 @@ source_file = openmrs/i18n/home/locale_en.json
 source_lang = en
 type = KEYVALUEJSON
 
-[o:openmrs:p:bahmni:r:default-customization-of-orders-app]
+[o:openmrs:p:bahmni:r:orders-app]
 file_filter = openmrs/i18n/orders/locale_<lang>.json
 source_file = openmrs/i18n/orders/locale_en.json
 source_lang = en
