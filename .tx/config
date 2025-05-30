@@ -5,14 +5,12 @@ minimum_perc = 40
 [o:openmrs:p:bahmni:r:default-customization-of-admin-app]
 file_filter = openmrs/i18n/admin/locale_<lang>.json
 source_file = openmrs/i18n/admin/locale_en.json
-file_filter = translations/bahmni.default-customization-of-admin-app/<lang>.json
 source_lang = en
 type = KEYVALUEJSON
 
 [o:openmrs:p:bahmni:r:default-customization-of-adt-app]
 file_filter = openmrs/i18n/adt/locale_<lang>.json
 source_file = openmrs/i18n/adt/locale_en.json
-file_filter = translations/bahmni.default-customization-of-adt-app/<lang>.json
 source_lang = en
 type = KEYVALUEJSON
 
@@ -34,7 +32,7 @@ source_file = openmrs/i18n/home/locale_en.json
 source_lang = en
 type = KEYVALUEJSON
 
-[o:openmrs:p:bahmni:r:default-customization-of-orders-app]
+[o:openmrs:p:bahmni:r:orders-app]
 file_filter = openmrs/i18n/orders/locale_<lang>.json
 source_file = openmrs/i18n/orders/locale_en.json
 source_lang = en
@@ -46,3 +44,20 @@ source_file = openmrs/i18n/registration/locale_en.json
 source_lang = en
 type = KEYVALUEJSON
 
+[o:openmrs:p:bahmni:r:ipd-app]
+file_filter = openmrs/i18n/ipd/locale_<lang>.json
+source_file = openmrs/i18n/ipd/locale_en.json
+source_lang = en
+type = KEYVALUEJSON
+
+[o:openmrs:p:bahmni:r:default-customization-of-ot-app]
+file_filter = openmrs/i18n/ot/locale_<lang>.json
+source_file = openmrs/i18n/ot/locale_en.json
+source_lang = en
+type = KEYVALUEJSON
+
+[o:openmrs:p:bahmni:r:appointments-frontend-app]
+file_filter = openmrs/i18n/appointments/locale_<lang>.json
+source_file = openmrs/i18n/appointments/locale_en.json
+source_lang = en
+type = KEYVALUEJSON
