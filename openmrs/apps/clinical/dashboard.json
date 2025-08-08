@@ -20,11 +20,17 @@
             },
             "ips": {
                 "translationKey": "DASHBOARD_TITLE_IPS_LAC_KEY",
-                "type": "custom",
+                "type": "ipsReact",
                 "displayOrder": 1,
                 "config": {
-                    "title": "IPS LAC Dashboard",
-                    "template": "<ips-dashboard ips-data=\"ipsData\" ips-api=\"ipsApi\" app-service=\"appService\"></ips-dashboard>"
+                    "sections": {
+                        "immunizations": { "enabled": true, "maxItems": 10 },
+                        "allergies": { "enabled": true, "maxItems": 10 },
+                        "medications": { "enabled": true, "maxItems": 10 },
+                        "diagnoses": { "enabled": true, "maxItems": 10 },
+                        "procedures": { "enabled": true, "maxItems": 5 }
+                    },
+                    "document": { "autoGenerate": false, "format": "pdf", "language": "es" }
                 }
             },
             "allergies": {
@@ -34,7 +40,7 @@
             },
             "forms-v2-react": {
                 "type": "formsV2React",
-                "displayOrder": 17,
+                "displayOrder": 3,
                 "dashboardConfig": {
                     "title": null,
                     "maximumNoOfVisits": 10,
@@ -48,13 +54,13 @@
                 "showCertainty":true,
                 "showOrder":true,
                 "showDetailsButton":true,
-                "displayOrder":1
+                "displayOrder":4
             },
             
             "notificacionGes": {
 		"translationKey":"DASHBOARD_TITLE_NOTIFICACION_GES",
                 "type": "custom",
-                "displayOrder": 3,
+                "displayOrder": 5,
                 "config": {
                     "title": "Notificacion GES",
                     "template": "<notificacion-ges section='config' patient='patient'></notificacion-ges>"
@@ -64,7 +70,7 @@
             "navigationLinksControl":{  
                 "translationKey":"DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
                 "type":"navigationLinksControl",
-                "displayOrder":2,
+                "displayOrder":6,
                 "showLinks":[  
                     "home",
                     "visit",
@@ -80,12 +86,12 @@
                 "showDetailsButton":true,
                 "type":"disposition",
                 "numberOfVisits":1,
-                "displayOrder":16
+                "displayOrder":7
             },
             "treatments":{  
                 "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
                 "type":"treatment",
-                "displayOrder": 4,
+                "displayOrder": 8,
                 "dashboardConfig":{  
                     "showFlowSheet":true,
                     "showListView":true,
@@ -115,18 +121,18 @@
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
                 "type":"radiology",
                 "showDetailsButton":true,
-                "displayOrder":6
+                "displayOrder":9
             },
             "programs":{  
                 "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
                 "type":"programs",
-                "displayOrder":13
+                "displayOrder":10
             },
             "radiologyOrders":{  
                 "orderType":"Radiology Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
-                "displayOrder":14,
+                "displayOrder":11,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "Summary"
@@ -138,7 +144,7 @@
                 "orderType":"Radiology Order",
                 "type":"pacsOrders",
                 "translationKey":"DASHBOARD_TITLE_PACS_KEY",
-                "displayOrder":11,
+                "displayOrder":12,
                 "dashboardConfig":{  
                     "pacsImageUrl":"/oviyam2/oviyam?patientID={{patientID}}&accessionNumber={{orderNumber}}",
                     "numberOfVisits":4
@@ -149,7 +155,7 @@
                 "type":"ordersControl",
                 "orderType":"Lab Order",
                 "showDetailsButton":true,
-                "displayOrder":8,
+                "displayOrder":13,
                 "dashboardConfig":{
                     "conceptNames":[]
                 },
@@ -161,7 +167,7 @@
             "bacteriologyResults":{  
                 "translationKey":"DASHBOARD_TITLE_BACTERIOLOGY_RESULTS_KEY",
                 "type":"bacteriologyResultsControl",
-                "displayOrder": 20,
+                "displayOrder": 14,
                 "scope":"All",
                 "orderType":"",
                 "dashboardConfig":{  
@@ -173,7 +179,7 @@
             "labResults":{  
                 "translationKey":"DASHBOARD_TITLE_LAB_RESULTS_KEY",
                 "type":"labOrders",
-                "displayOrder":5,
+                "displayOrder":15,
                 "dashboardConfig":{  
                     "title":null,
                     "numberOfVisits":6,
@@ -202,7 +208,7 @@
                 "translationKey":"DASHBOARD_TITLE_BASIC_DETAILS_KEY",
                 "type":"observation",
                 "isObservation":true,
-                "displayOrder":9    ,
+                "displayOrder":16    ,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "Height (cm)",
@@ -234,7 +240,7 @@
             "flowsheet": {
 		"translationKey": "DASHBOARD_TITLE_VITALS_FLOW_KEY",
                 "type": "flowSheet",
-                "displayOrder": 12,
+                "displayOrder": 17,
                 "dashboardConfig": {
                     "latestCount": "5",
                     "groupBy": "obstime",
@@ -266,7 +272,7 @@
                 "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY",
                 "type":"vitals",
                 "isObservation":true,
-                "displayOrder": 10,
+                "displayOrder": 18,
                 "dashboardConfig":{  
                     "showDetailsButton":true,
                     "conceptNames":[  
@@ -296,7 +302,7 @@
             "visits":{  
                 "translationKey":"DASHBOARD_TITLE_VISITS_KEY",
                 "type":"visits",
-                "displayOrder":7,
+                "displayOrder":19,
                 "dashboardConfig":{  
                     "title":null,
                     "maximumNoOfVisits":8,
@@ -306,17 +312,17 @@
             "admissionDetails":{  
                 "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
                 "type":"admissionDetails",
-                "displayOrder":18,
+                "displayOrder":20,
                 "showDetailsButton":true
             },
             "conditions": {
                 "translationKey":"CONDITION_LIST_DISPLAY_CONTROL_TITLE",
                 "type": "conditionsList",
-                "displayOrder": 3
+                "displayOrder": 21
             },
             "formsDisplay": {
                 "type": "forms",
-                "displayOrder": 15,
+                "displayOrder": 22,
                 "dashboardConfig": {
                     "title": null,
                     "maximumNoOfVisits": 10
@@ -326,7 +332,7 @@
             },
             "patientAppointments": {
                 "type": "custom",
-                "displayOrder": 19,
+                "displayOrder": 23,
                 "config": {
                     "title": "DASHBOARD_TITLE_APPOINTMENTS_KEY",
                     "template": "<patient-appointments-dashboard section='config' patient='patient'></patient-appointments-dashboard>"
@@ -337,7 +343,7 @@
                 "type":"ordersControl",
                 "orderType":"Procedure Order",
                 "showDetailsButton":true,
-                "displayOrder":21,
+                "displayOrder":24,
                 "dashboardConfig":{
                     "conceptNames":[]
                 },
@@ -362,7 +368,8 @@
                     "isEditable": true,
                     "groupByConcept": "",
                     "conceptNames": []
-                }
+                },
+                "displayOrder": 25
             }
         }
     },

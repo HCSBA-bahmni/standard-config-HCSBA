@@ -174,23 +174,6 @@
             "debounceSearch": false,
             "fetchDelay": 2000,
             "serializeSearch": false
-        },
-        "dashboardSections": {
-            "ips": {
-                "type": "ipsReact",
-                "displayOrder": 1,
-                "title": "IPS LAC",
-                "config": {
-                    "sections": {
-                        "immunizations": { "enabled": true, "maxItems": 10 },
-                        "allergies": { "enabled": true, "maxItems": 10 },
-                        "medications": { "enabled": true, "maxItems": 10 },
-                        "diagnoses": { "enabled": true, "maxItems": 10 },
-                        "procedures": { "enabled": true, "maxItems": 5 }
-                    },
-                    "document": { "autoGenerate": false, "format": "pdf", "language": "es" }
-                }
-            }
         }
     }
 }
