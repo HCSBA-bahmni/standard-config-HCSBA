@@ -18,6 +18,15 @@
                     "countyDistrict"
                 ]
             },
+            "ips": {
+                "translationKey": "DASHBOARD_TITLE_IPS_LAC_KEY",
+                "type": "custom",
+                "displayOrder": 1,
+                "config": {
+                    "title": "IPS LAC Dashboard",
+                    "template": "<ips-dashboard ips-data=\"ipsData\" ips-api=\"ipsApi\" app-service=\"appService\"></ips-dashboard>"
+                }
+            },
             "allergies": {
 		"translationKey":"DASHBOARD_TITLE_PATIENT_ALLERGIES_KEY",
                 "type":"allergies",

@@ -338,4 +338,22 @@ angular.module('bahmni.common.displaycontrol.custom')
         },
         template: '<ng-include src="contentUrl"/>'
     };
-}]);
+}]).directive('ipsDashboard', ['appService', function (appService) {
+        var link = function ($scope) {
+            $scope.contentUrl = appService.configBaseUrl() + "/customDisplayControl/views/ipsSection.html";
+            // Nota: ipsData y ipsApi se esperan desde el scope padre (p.ej. un controlador específico)
+            // Si no existen, inicializamos objetos vacíos para evitar errores de plantilla
+            $scope.ipsData = $scope.ipsData || {};
+            $scope.ipsApi = $scope.ipsApi || {};
+        };
+        return {
+            restrict: 'E',
+            link: link,
+            scope: {
+                ipsData: '=?',
+                ipsApi: '=?',
+                appService: '=?'
+            },
+            template: '<ng-include src="contentUrl"/>'
+        };
+    }]);
