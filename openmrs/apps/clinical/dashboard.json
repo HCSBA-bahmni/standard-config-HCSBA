@@ -18,21 +18,6 @@
                     "countyDistrict"
                 ]
             },
-            "ips": {
-                "translationKey": "DASHBOARD_TITLE_IPS_LAC_KEY",
-                "type": "ipsReact",
-                "displayOrder": 1,
-                "config": {
-                    "sections": {
-                        "immunizations": { "enabled": true, "maxItems": 10 },
-                        "allergies": { "enabled": true, "maxItems": 10 },
-                        "medications": { "enabled": true, "maxItems": 10 },
-                        "diagnoses": { "enabled": true, "maxItems": 10 },
-                        "procedures": { "enabled": true, "maxItems": 5 }
-                    },
-                    "document": { "autoGenerate": false, "format": "pdf", "language": "es" }
-                }
-            },
             "allergies": {
 		"translationKey":"DASHBOARD_TITLE_PATIENT_ALLERGIES_KEY",
                 "type":"allergies",
@@ -70,7 +55,7 @@
             "navigationLinksControl":{  
                 "translationKey":"DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
                 "type":"navigationLinksControl",
-                "displayOrder":6,
+                "displayOrder":1,
                 "showLinks":[  
                     "home",
                     "visit",
@@ -86,12 +71,12 @@
                 "showDetailsButton":true,
                 "type":"disposition",
                 "numberOfVisits":1,
-                "displayOrder":7
+                "displayOrder":6
             },
             "treatments":{  
                 "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
                 "type":"treatment",
-                "displayOrder": 8,
+                "displayOrder": 7,
                 "dashboardConfig":{  
                     "showFlowSheet":true,
                     "showListView":true,
@@ -121,18 +106,18 @@
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
                 "type":"radiology",
                 "showDetailsButton":true,
-                "displayOrder":9
+                "displayOrder":8
             },
             "programs":{  
                 "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
                 "type":"programs",
-                "displayOrder":10
+                "displayOrder":9
             },
             "radiologyOrders":{  
                 "orderType":"Radiology Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
-                "displayOrder":11,
+                "displayOrder":10,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "Summary"
@@ -144,7 +129,7 @@
                 "orderType":"Radiology Order",
                 "type":"pacsOrders",
                 "translationKey":"DASHBOARD_TITLE_PACS_KEY",
-                "displayOrder":12,
+                "displayOrder":11,
                 "dashboardConfig":{  
                     "pacsImageUrl":"/oviyam2/oviyam?patientID={{patientID}}&accessionNumber={{orderNumber}}",
                     "numberOfVisits":4
@@ -155,7 +140,7 @@
                 "type":"ordersControl",
                 "orderType":"Lab Order",
                 "showDetailsButton":true,
-                "displayOrder":13,
+                "displayOrder":12,
                 "dashboardConfig":{
                     "conceptNames":[]
                 },
@@ -167,7 +152,7 @@
             "bacteriologyResults":{  
                 "translationKey":"DASHBOARD_TITLE_BACTERIOLOGY_RESULTS_KEY",
                 "type":"bacteriologyResultsControl",
-                "displayOrder": 14,
+                "displayOrder": 13,
                 "scope":"All",
                 "orderType":"",
                 "dashboardConfig":{  
@@ -179,7 +164,7 @@
             "labResults":{  
                 "translationKey":"DASHBOARD_TITLE_LAB_RESULTS_KEY",
                 "type":"labOrders",
-                "displayOrder":15,
+                "displayOrder":14,
                 "dashboardConfig":{  
                     "title":null,
                     "numberOfVisits":6,
@@ -208,7 +193,7 @@
                 "translationKey":"DASHBOARD_TITLE_BASIC_DETAILS_KEY",
                 "type":"observation",
                 "isObservation":true,
-                "displayOrder":16    ,
+                "displayOrder":15    ,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "Height (cm)",
@@ -240,7 +225,7 @@
             "flowsheet": {
 		"translationKey": "DASHBOARD_TITLE_VITALS_FLOW_KEY",
                 "type": "flowSheet",
-                "displayOrder": 17,
+                "displayOrder": 16,
                 "dashboardConfig": {
                     "latestCount": "5",
                     "groupBy": "obstime",
@@ -272,7 +257,7 @@
                 "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY",
                 "type":"vitals",
                 "isObservation":true,
-                "displayOrder": 18,
+                "displayOrder": 17,
                 "dashboardConfig":{  
                     "showDetailsButton":true,
                     "conceptNames":[  
@@ -302,7 +287,7 @@
             "visits":{  
                 "translationKey":"DASHBOARD_TITLE_VISITS_KEY",
                 "type":"visits",
-                "displayOrder":19,
+                "displayOrder":18,
                 "dashboardConfig":{  
                     "title":null,
                     "maximumNoOfVisits":8,
@@ -312,17 +297,17 @@
             "admissionDetails":{  
                 "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
                 "type":"admissionDetails",
-                "displayOrder":20,
+                "displayOrder":19,
                 "showDetailsButton":true
             },
             "conditions": {
                 "translationKey":"CONDITION_LIST_DISPLAY_CONTROL_TITLE",
                 "type": "conditionsList",
-                "displayOrder": 21
+                "displayOrder": 20
             },
             "formsDisplay": {
                 "type": "forms",
-                "displayOrder": 22,
+                "displayOrder": 21,
                 "dashboardConfig": {
                     "title": null,
                     "maximumNoOfVisits": 10
@@ -332,7 +317,7 @@
             },
             "patientAppointments": {
                 "type": "custom",
-                "displayOrder": 23,
+                "displayOrder": 22,
                 "config": {
                     "title": "DASHBOARD_TITLE_APPOINTMENTS_KEY",
                     "template": "<patient-appointments-dashboard section='config' patient='patient'></patient-appointments-dashboard>"
@@ -343,7 +328,7 @@
                 "type":"ordersControl",
                 "orderType":"Procedure Order",
                 "showDetailsButton":true,
-                "displayOrder":24,
+                "displayOrder":23,
                 "dashboardConfig":{
                     "conceptNames":[]
                 },
@@ -369,7 +354,28 @@
                     "groupByConcept": "",
                     "conceptNames": []
                 },
-                "displayOrder": 25
+                "displayOrder": 24
+            }
+        }
+    },
+    "ips": {
+        "translationKey": "DASHBOARD_TAB_IPS_KEY",
+        "displayByDefault": false,
+        "sections": {
+            "ips": {
+                "translationKey": "DASHBOARD_TITLE_IPS_LAC_KEY",
+                "type": "ipsReact",
+                "displayOrder": 1,
+                "config": {
+                    "sections": {
+                        "immunizations": { "enabled": true, "maxItems": 10 },
+                        "allergies": { "enabled": true, "maxItems": 10 },
+                        "medications": { "enabled": true, "maxItems": 10 },
+                        "diagnoses": { "enabled": true, "maxItems": 10 },
+                        "procedures": { "enabled": true, "maxItems": 5 }
+                    },
+                    "document": { "autoGenerate": false, "format": "pdf", "language": "es" }
+                }
             }
         }
     },
