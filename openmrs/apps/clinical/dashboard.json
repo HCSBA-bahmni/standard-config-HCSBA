@@ -1,17 +1,17 @@
-{  
-    "general":{  
+{
+    "general":{
         "translationKey":"DASHBOARD_TAB_GENERAL_KEY",
         "displayByDefault":true,
         "maxRecentlyViewedPatients":10,
-        "sections":{  
-            "patientInformation":{  
+        "sections":{
+            "patientInformation":{
                 "translationKey":"DASHBOARD_TITLE_PATIENT_INFORMATION_KEY",
                 "type":"patientInformation",
                 "displayOrder":0,
                 "ageLimit":100,
                 "patientAttributes":[],
                 "additionalPatientIdentifiers": [],
-                "addressFields":[  
+                "addressFields":[
                     "address1",
                     "address2",
                     "cityVillage",
@@ -19,7 +19,7 @@
                 ]
             },
             "allergies": {
-		"translationKey":"DASHBOARD_TITLE_PATIENT_ALLERGIES_KEY",
+		        "translationKey":"DASHBOARD_TITLE_PATIENT_ALLERGIES_KEY",
                 "type":"allergies",
                 "displayOrder": 2
             },
@@ -33,6 +33,31 @@
                 },
                 "translationKey": "Observation Forms"
             },
+            "vacunas-react": {
+                "type": "vacunasReact",
+                "displayOrder": 22,
+                "translationKey": "DASHBOARD_TITLE_VACUNAS_KEY"
+            },
+            "ips-react":{
+                "title": "IPS LAC Dashboard",
+                "name": "ips",
+                "type": "ipsReact",
+                "displayOrder": 23,
+                "isObservation": false,
+                "hideEmptyDisplayControl": false,
+                "translationKey": "DASHBOARD_TITLE_IPS_LAC_KEY",
+                "config": {
+                "showSections": {
+                    "vacunas": true,
+                    "alergias": true,
+                    "medicamentos": true,
+                    "diagnosticos": true,
+                    "procedimientos": true
+                },
+                "maxItemsPerSection": 5,
+                "allowGeneration": true
+                }
+            },
             "diagnosis":{
                 "translationKey":"DASHBOARD_TITLE_DIAGNOSIS_KEY",
                 "type":"diagnosis",
@@ -41,7 +66,7 @@
                 "showDetailsButton":true,
                 "displayOrder":1
             },
-            
+
             "notificacionGes": {
 		"translationKey":"DASHBOARD_TITLE_NOTIFICACION_GES",
                 "type": "custom",
@@ -51,12 +76,12 @@
                     "template": "<notificacion-ges section='config' patient='patient'></notificacion-ges>"
                 }
             },
-            
-            "navigationLinksControl":{  
+
+            "navigationLinksControl":{
                 "translationKey":"DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
                 "type":"navigationLinksControl",
                 "displayOrder":2,
-                "showLinks":[  
+                "showLinks":[
                     "home",
                     "visit",
                     "registration",
@@ -66,18 +91,18 @@
                     "labEntry"
                 ]
             },
-            "disposition":{  
+            "disposition":{
                 "translationKey":"DASHBOARD_TITLE_DISPOSITION_KEY",
                 "showDetailsButton":true,
                 "type":"disposition",
                 "numberOfVisits":1,
                 "displayOrder":16
             },
-            "treatments":{  
+            "treatments":{
                 "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
                 "type":"treatment",
                 "displayOrder": 4,
-                "dashboardConfig":{  
+                "dashboardConfig":{
                     "showFlowSheet":true,
                     "showListView":true,
                     "showRoute":true,
@@ -86,7 +111,7 @@
                     "showOtherActive":true,
                     "showDetailsButton":true
                 },
-                "expandedViewConfig":{  
+                "expandedViewConfig":{
                     "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
                     "showFlowSheet":true,
                     "showListView":true,
@@ -102,35 +127,35 @@
                     "logo": "../images/bahmniLogo.png"
                 }
             },
-            "radiology":{  
+            "radiology":{
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
                 "type":"radiology",
                 "showDetailsButton":true,
                 "displayOrder":6
             },
-            "programs":{  
+            "programs":{
                 "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
                 "type":"programs",
                 "displayOrder":13
             },
-            "radiologyOrders":{  
+            "radiologyOrders":{
                 "orderType":"Radiology Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
                 "displayOrder":14,
-                "dashboardConfig":{  
-                    "conceptNames":[  
+                "dashboardConfig":{
+                    "conceptNames":[
                         "Summary"
                     ],
                     "numberOfVisits":4
                 }
             },
-            "pacs":{  
+            "pacs":{
                 "orderType":"Radiology Order",
                 "type":"pacsOrders",
                 "translationKey":"DASHBOARD_TITLE_PACS_KEY",
                 "displayOrder":11,
-                "dashboardConfig":{  
+                "dashboardConfig":{
                     "pacsImageUrl":"/oviyam2/oviyam?patientID={{patientID}}&accessionNumber={{orderNumber}}",
                     "numberOfVisits":4
                 }
@@ -149,23 +174,23 @@
                     "showDetailsButton":true
                 }
             },
-            "bacteriologyResults":{  
+            "bacteriologyResults":{
                 "translationKey":"DASHBOARD_TITLE_BACTERIOLOGY_RESULTS_KEY",
                 "type":"bacteriologyResultsControl",
                 "displayOrder": 20,
                 "scope":"All",
                 "orderType":"",
-                "dashboardConfig":{  
-                    "conceptNames":[  
+                "dashboardConfig":{
+                    "conceptNames":[
                         "BACTERIOLOGY CONCEPT SET"
                     ]
                 }
             },
-            "labResults":{  
+            "labResults":{
                 "translationKey":"DASHBOARD_TITLE_LAB_RESULTS_KEY",
                 "type":"labOrders",
                 "displayOrder":5,
-                "dashboardConfig":{  
+                "dashboardConfig":{
                     "title":null,
                     "numberOfVisits":6,
                     "showChart":false,
@@ -177,25 +202,25 @@
                     "chartConfig": {
                         "sortResultColumnsLatestFirst":true,
                         "groupByPanel":true
-                    }  
+                    }
                 },
-                "expandedViewConfig":{  
+                "expandedViewConfig":{
                     "numberOfVisits":10,
                     "showChart":true,
                     "showTable":false,
                     "chartConfig": {
                         "sortResultColumnsLatestFirst":true,
                         "groupByPanel":true
-                    }  
+                    }
                 }
             },
-            "basicDetails":{  
+            "basicDetails":{
                 "translationKey":"DASHBOARD_TITLE_BASIC_DETAILS_KEY",
                 "type":"observation",
                 "isObservation":true,
                 "displayOrder":9    ,
-                "dashboardConfig":{  
-                    "conceptNames":[  
+                "dashboardConfig":{
+                    "conceptNames":[
                         "Height (cm)",
                         "Weight (kg)",
                         "Body mass index",
@@ -205,8 +230,8 @@
                     "showDetailsButton":true,
                     "numberOfVisits":2
                 },
-                "expandedViewConfig":{  
-                    "conceptNames":[  
+                "expandedViewConfig":{
+                    "conceptNames":[
                         "Height (cm)",
                         "Weight (kg)",
                         "Body mass index",
@@ -216,7 +241,7 @@
                     "scope":"latest",
                     "showDetailsButton":true,
                     "displayNameType": "FSN",
-                    "pivotTable":{  
+                    "pivotTable":{
 
                     }
                 },
@@ -253,14 +278,14 @@
                     ]
                 }
             },
-            "historyAndExaminations":{  
+            "historyAndExaminations":{
                 "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY",
                 "type":"vitals",
                 "isObservation":true,
                 "displayOrder": 10,
-                "dashboardConfig":{  
+                "dashboardConfig":{
                     "showDetailsButton":true,
-                    "conceptNames":[  
+                    "conceptNames":[
                         "Chief Complaint Record",
                         "History of present illness",
                         "Smoking status",
@@ -279,22 +304,22 @@
                     ],
                     "numberOfVisits":2,
                     "showDetailsButton":true,
-                    "pivotTable":{  
+                    "pivotTable":{
 
                     }
                 }
             },
-            "visits":{  
+            "visits":{
                 "translationKey":"DASHBOARD_TITLE_VISITS_KEY",
                 "type":"visits",
                 "displayOrder":7,
-                "dashboardConfig":{  
+                "dashboardConfig":{
                     "title":null,
                     "maximumNoOfVisits":8,
                     "groupByVisits":true
                 }
             },
-            "admissionDetails":{  
+            "admissionDetails":{
                 "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
                 "type":"admissionDetails",
                 "displayOrder":18,
@@ -357,14 +382,14 @@
             }
         }
     },
-    "trends":{  
+    "trends":{
         "translationKey":"DASHBOARD_TAB_TRENDS_KEY",
         "maxRecentlyViewedPatients":10,
-        "sections":{  
-            "patientInformation":{  
+        "sections":{
+            "patientInformation":{
                 "translationKey":"DASHBOARD_TITLE_PATIENT_INFORMATION_KEY",
                 "type":"patientInformation",
-                "patientAttributes":[  
+                "patientAttributes":[
                     "caste",
                     "class",
                     "education",
@@ -376,7 +401,7 @@
                     "RationCard",
                     "familyIncome"
                 ],
-                "addressFields":[  
+                "addressFields":[
                     "address1",
                     "address2",
                     "cityVillage",
@@ -384,11 +409,11 @@
                 ],
                 "displayOrder":0
             },
-            "growthChart":{  
+            "growthChart":{
                 "type":"observationGraph",
                 "translationKey": "DASHBOARD_TITLE_GROWTH_CHART",
-                "config":{  
-                    "yAxisConcepts":[  
+                "config":{
+                    "yAxisConcepts":[
                         "Weight (kg)"
                     ],
                     "referenceData":"growthChartReference.csv",
@@ -396,11 +421,11 @@
                 },
                 "displayOrder":1
             },
-            "BP":{  
+            "BP":{
                 "type":"observationGraph",
                 "translationKey": "DASHBOARD_TITLE_BLOOD_PRESSURE",
-                "config":{  
-                    "yAxisConcepts":[  
+                "config":{
+                    "yAxisConcepts":[
                         "Systolic blood pressure",
                         "Diastolic blood pressure"
                     ],
@@ -409,11 +434,11 @@
                 },
                 "displayOrder":2
             },
-            "weight/BMI":{  
+            "weight/BMI":{
                 "type":"observationGraph",
                 "translationKey": "DASHBOARD_TITLE_WEIGHT_BMI",
-                "config":{  
-                    "yAxisConcepts":[  
+                "config":{
+                    "yAxisConcepts":[
                         "Weight (kg)",
                         "BMI"
                     ],
@@ -422,11 +447,11 @@
                 },
                 "displayOrder":3
             },
-            "diabetes/BloodSugar":{  
+            "diabetes/BloodSugar":{
                 "type":"observationGraph",
                 "translationKey": "DASHBOARD_TITLE_DIABETES_BLOOD_SUGAR",
-                "config":{  
-                    "yAxisConcepts":[  
+                "config":{
+                    "yAxisConcepts":[
                         "Fasting blood glucose measurement (mg/dL)",
                         "Serum glucose"
                     ],
@@ -435,11 +460,11 @@
                 },
                 "displayOrder":4
             },
-            "observationGraph":{  
+            "observationGraph":{
                 "type":"observationGraph",
                 "translationKey": "DASHBOARD_TITLE_PULSE",
-                "config":{  
-                    "yAxisConcepts":[  
+                "config":{
+                    "yAxisConcepts":[
                         "Pulse"
                     ],
                     "xAxisConcept":"observationDateTime",
@@ -449,32 +474,32 @@
             }
         }
     },
-    "patientSummary":{  
+    "patientSummary":{
         "translationKey":"DASHBOARD_TAB_PATIENT_SUMMARY_KEY",
         "maxRecentlyViewedPatients":10,
-        "sections":{  
-            "Bacteriology Concept Set":{  
+        "sections":{
+            "Bacteriology Concept Set":{
                 "displayType":"Full-Page",
                 "translationKey":"DASHBOARD_TITLE_BACTERIOLOGY_RESULTS_KEY",
                 "type":"obsToObsFlowSheet",
-                "dashboardConfig":{  
+                "dashboardConfig":{
                     "numberOfVisits":1,
                     "templateName":"BACTERIOLOGY CONCEPT SET",
                     "groupByConcept":"Specimen Collection Date",
-                    "conceptNames":[  
+                    "conceptNames":[
                         "Specimen Id"
                     ]
                 },
-                "expandedViewConfig":{  
+                "expandedViewConfig":{
                     "templateName":"BACTERIOLOGY CONCEPT SET",
                     "groupByConcept":"Specimen Collection Date"
                 }
             },
-            "HistoryAndExamination":{  
+            "HistoryAndExamination":{
                 "type":"historyAndExamination",
                 "isObservation":true,
                 "displayType":"Full-Page",
-                "dashboardConfig":{  
+                "dashboardConfig":{
                     "showGroupDateTime":false,
                     "conceptNames":[
                         "Chief Complaint Record",
@@ -488,18 +513,18 @@
                 "displayOrder":6,
                 "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY"
             },
-            "drugOther":{  
+            "drugOther":{
                 "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
                 "type":"drugOrderDetails",
                 "displayType":"Full-Page",
                 "showDetailsButton":true,
                 "displayOrder":24,
-                "dashboardConfig":{  
+                "dashboardConfig":{
                     "showOnlyActive":true,
                     "drugConceptSet":"All Other Drugs"
                 }
             },
-            "malaria":{  
+            "malaria":{
                 "title":"Malaria",
                 "type":"obsToObsFlowSheet",
                 "displayType":"Full-Page",
@@ -517,17 +542,17 @@
                     ]
                 }
             },
-            "Chronic Treatment Chart":{  
+            "Chronic Treatment Chart":{
                 "displayType":"Full-Page",
                 "title":"Chronic Treatment Chart",
                 "type":"chronicTreatmentChart",
-                "dashboardConfig":{  
-                    "drugs":[  
+                "dashboardConfig":{
+                    "drugs":[
 
                     ]
                 },
-                "expandedViewConfig":{  
-                    "drugs":[  
+                "expandedViewConfig":{
+                    "drugs":[
 
                     ]
                 }
