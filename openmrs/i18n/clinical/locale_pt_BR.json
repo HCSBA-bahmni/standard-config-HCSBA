@@ -40,6 +40,7 @@
   "DASHBOARD_TAB_PATIENT_SUMMARY_KEY": "Resumo do Paciente",
   "DASHBOARD_TAB_DISCHARGE_SUMMARY_KEY": "Resumo de Altas",
   "DASHBOARD_TAB_ORDERS_KEY": "Pedidos",
+  "DASHBOARD_TAB_IPS_KEY": "IPS",
 
   "LAB_INVESTIGATIONS_KEY":"Investigações de Laboratórios",
   "RADIOLOGY_ORDERS_KEY": "Pedidos da Radiologia",
@@ -95,5 +96,6 @@
   "PROGRAM_TREATMENT_DATE": "Data do tratamento",
   "PROGRAM_COMORBIDITES": "Comorbidades",
   "PROGRAM_DOCTORINCHARGE": "Médico Responsável",
-  "PROGRAM_PATIENT_STAGE": "Estado do paciente"
+  "PROGRAM_PATIENT_STAGE": "Estado do paciente",
+  "DASHBOARD_TITLE_IPS_LAC_KEY": "IPS LAC"
 }
