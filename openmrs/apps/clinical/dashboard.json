@@ -58,6 +58,28 @@
                 "allowGeneration": true
                 }
             },
+            "ips-icvp-react": {
+                "title": "ICVP Dashboard",
+                "name": "ipsICVP",
+                "type": "ipsIcvpReact",
+                "displayOrder": 24,
+                "isObservation": false,
+                "hideEmptyDisplayControl": false,
+                "translationKey": "DASHBOARD_TITLE_IPS_ICVP_KEY",
+                "config": {
+                    "showSections": {
+                    "vacunas": true,
+                    "alergias": false,
+                    "medicamentos": false,
+                    "diagnosticos": false,
+                    "procedimientos": false
+                    },
+                    "maxItemsPerSection": 5,
+                    "allowGeneration": true,
+                    "allowResolve": true,
+                    "allowShare": true
+                }
+            },   
             "diagnosis":{
                 "translationKey":"DASHBOARD_TITLE_DIAGNOSIS_KEY",
                 "type":"diagnosis",
