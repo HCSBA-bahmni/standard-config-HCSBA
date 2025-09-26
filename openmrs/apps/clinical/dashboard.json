@@ -33,11 +33,6 @@
                 },
                 "translationKey": "Observation Forms"
             },
-            "vacunas-react": {
-                "type": "vacunasReact",
-                "displayOrder": 22,
-                "translationKey": "DASHBOARD_TITLE_VACUNAS_KEY"
-            },
             "ips-react":{
                 "title": "IPS LAC Dashboard",
                 "name": "ips",
