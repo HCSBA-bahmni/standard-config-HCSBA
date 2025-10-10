@@ -1,12 +1,6 @@
 <addressConfiguration>
   <wipe>true</wipe>
   <addressComponents>
-      <addressComponent>
-      <field>COUNTRY</field>
-      <nameMapping>Country</nameMapping>
-      <sizeMapping>40</sizeMapping>
-      <requiredInHierarchy>false</requiredInHierarchy>
-    </addressComponent>
     <addressComponent>
       <field>STATE_PROVINCE</field>
       <nameMapping>State</nameMapping>
@@ -16,6 +10,12 @@
     <addressComponent>
       <field>COUNTY_DISTRICT</field>
       <nameMapping>District</nameMapping>
+      <sizeMapping>40</sizeMapping>
+      <requiredInHierarchy>false</requiredInHierarchy>
+    </addressComponent>
+    <addressComponent>
+      <field>POSTAL_CODE</field>
+      <nameMapping>Pin Code</nameMapping>
       <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
