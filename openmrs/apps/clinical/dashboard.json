@@ -396,6 +396,15 @@
                     "groupByConcept": "",
                     "conceptNames": []
                 }
+            },
+            "allOrdersDashboard": {
+                "title": "Órdenes del Paciente",
+                "name": "allOrders",
+                "type": "allOrdersReact",
+                "displayOrder": 25,
+                "isObservation": false,
+                "hideEmptyDisplayControl": false,
+                "translationKey": "DASHBOARD_TITLE_ALL_ORDERS_KEY"
             }
         }
     },
