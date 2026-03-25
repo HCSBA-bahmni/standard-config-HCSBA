@@ -38,8 +38,8 @@
             "allergySeverityUuid": "160223AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
         },
         "showTextAsAbnormal": false,
-        "quickPrints":false,
-        "allowAdhocTeleConsultation": false,
+        "quickPrints":true,
+        "allowAdhocTeleConsultation": true,
         "teleConsultationDomain": "meet.jit.si",
         "networkConnectivity" : {
             "showNetworkStatusMessage": false,
@@ -89,7 +89,7 @@
             "Radiology": "Radiology Order",
             "Endoscopy": "Endoscopy Order"
         },
-        "allowConsultationWhenNoOpenVisit": false,
+        "allowConsultationWhenNoOpenVisit": true,
         "defaultVisitType": "OPD",
         "visitTypeForRetrospectiveEntries": "Special OPD",
         "maxConceptSetLevels": 3,
