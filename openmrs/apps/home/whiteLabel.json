@@ -1,6 +1,6 @@
 {
 	"homePage": {
-		"header_text": "<b>BIENVENIDO AL<br />SISTEMA EMR & SERVICIO HOSPITALARIO DEL HCSBA</b>",
+		"header_text": "<b>BIENVENIDO AL<br />SISTEMA EMR & SERVICIO HOSPITALARIO</b>",
 		"logo": "/bahmni_config/openmrs/apps/home/logo.png",
 		"title_text": " "
 	},
