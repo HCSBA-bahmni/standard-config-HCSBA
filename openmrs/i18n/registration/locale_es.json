@@ -16,9 +16,9 @@
   "REGISTRATION_OPD_DAYS_TEXT_KEY" : "Los días OPD son  el lunes, miércoles y viernes.",
   "REGISTRATION_SUNDAYS_HOLIDAY_TEXT_KEY": "Los domingos son días feriados",
   "REGISTRATION_SMOKING_INJURIOUS_TEXT_KEY" : "Fumar y el tabaco masticable pueden producir cáncer, enfermedades del corazón y EPOC.",
-  "REGISTRATION_INSTITUTE_NAME_TEXT_KEY": "Jan Swasthya Sahyog",
+  "REGISTRATION_INSTITUTE_NAME_TEXT_KEY": "Hospital",
   "REGISTRATION_INSTITUTE_REGISTERED_TEXT_KEY": "(Registrado)",
-  "REGISTRATION_INSTITUTE_ADDRESS": "Ganiyari, Distrito- Bilaspur",
+  "REGISTRATION_INSTITUTE_ADDRESS": "direccion hospital",
   "FEE_INFORMATION_LOCALE_KEY": "Información de Tarifa.",
   "NUTRITIONAL_VALUES_LOCALE_KEY": "Valores Nutricionales",
   "REGISTRATION_PRINT_WITH_BARCODE": "Imprimir <u>c</u>odigo de barras"
