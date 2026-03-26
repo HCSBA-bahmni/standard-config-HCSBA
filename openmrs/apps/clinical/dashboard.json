@@ -453,9 +453,7 @@
                 "config":{
                     "yAxisConcepts":[
                         "Presión Arterial Sistólica",
-                        "Presión Arterial Diastólica",
-                        "Systolic blood pressure",
-                        "Diastolic blood pressure"
+                        "Presión Arterial Diastólica"
                     ],
                     "xAxisConcept":"observationDateTime",
                     "numberOfVisits":10
@@ -493,7 +491,7 @@
                 "translationKey": "DASHBOARD_TITLE_PULSE",
                 "config":{
                     "yAxisConcepts":[
-                        "Pulse"
+                        "Pulso"
                     ],
                     "xAxisConcept":"observationDateTime",
                     "numberOfVisits":10
