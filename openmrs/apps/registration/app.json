@@ -106,9 +106,9 @@
             },
             "fieldValidation" : {
                     "email" : {"pattern" : "^(?=.{1,40}$)(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,4})$", "errorMessage" : "Should be a valid email address"},
-                    "familyName" : {"pattern" : "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+$", "errorMessage" : "The last name should contain only alphabets and can include spaces."},
-                    "givenName" : {"pattern" : "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+$", "errorMessage" : "The first name should contain only alphabets and can include spaces."},
-                    "middleName" : {"pattern" : "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]*$", "errorMessage" : "The middle name should contain only alphabets and can include spaces."},
+                    "familyName" : {"pattern" : "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ'\\s]+$", "errorMessage" : "The last name should contain only alphabets, apostrophes and can include spaces."},
+                    "givenName" : {"pattern" : "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ'\\s]+$", "errorMessage" : "The first name should contain only alphabets, apostrophes and can include spaces."},
+                    "middleName" : {"pattern" : "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ'\\s]*$", "errorMessage" : "The middle name should contain only alphabets, apostrophes and can include spaces."},
                     "address1":{"pattern":"^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ\\s'\\-\\/]{1,}", "errorMessage":"Only Alphanumerics and following special characters are allowed. Special characters - [ '-/]"},
                     "address2":{"pattern":"^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ\\s,'\\-.\\/]{1,}", "errorMessage":"Only Alphanumerics and following special characters are allowed. Special characters - [ ,'-./]"},
                     "cityVillage":{"pattern":"^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s,'\\-.\\/]{2,}", "errorMessage":"Only Alphanumerics and following special characters are allowed. Special characters - [ ,'-./]"}
