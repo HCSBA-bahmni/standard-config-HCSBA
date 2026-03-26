@@ -452,6 +452,8 @@
                 "translationKey": "DASHBOARD_TITLE_BLOOD_PRESSURE",
                 "config":{
                     "yAxisConcepts":[
+                        "Presión Arterial Sistólica",
+                        "Presión Arterial Diastólica",
                         "Systolic blood pressure",
                         "Diastolic blood pressure"
                     ],
