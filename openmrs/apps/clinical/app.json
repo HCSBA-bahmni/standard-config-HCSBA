@@ -23,6 +23,7 @@
         "visitUuid"
     ],
     "config": {
+        "configVersion": "2025.08.08.1",
         "hideFormName": true,
         "hideConditions": false,
         "enableRadiologyOrderOptions":["Urgent","NeedsPrint"],
@@ -37,17 +38,12 @@
             "allergySeverityUuid": "160223AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
         },
         "showTextAsAbnormal": false,
-        "quickPrints":false,
-        "allowAdhocTeleConsultation": false,
+        "quickPrints":true,
+        "allowAdhocTeleConsultation": true,
         "teleConsultationDomain": "meet.jit.si",
         "networkConnectivity" : {
             "showNetworkStatusMessage": false,
-            "networkStatusCheckInterval": 20000,
-            "locales" : [
-                { "locale" : "fr", "css" : "offline-language-french"},
-                { "locale" : "es", "css": "offline-language-spanish"},
-                { "locale" : "pt", "css": "offline-language-portuguese-brazil"}
-            ]
+            "networkStatusCheckInterval": 20000
         },
     	"diagnosisStatus": "Inactive",
             "program": {
@@ -93,7 +89,7 @@
             "Radiology": "Radiology Order",
             "Endoscopy": "Endoscopy Order"
         },
-        "allowConsultationWhenNoOpenVisit": false,
+        "allowConsultationWhenNoOpenVisit": true,
         "defaultVisitType": "OPD",
         "visitTypeForRetrospectiveEntries": "Special OPD",
         "maxConceptSetLevels": 3,
@@ -174,6 +170,11 @@
             "debounceSearch": false,
             "fetchDelay": 2000,
             "serializeSearch": false
+        },
+        "ipsMediator": {
+            "pdqmBase": "https://10.68.174.206:5000/pdqm",
+            "regionalBase": "https://10.68.174.206:5000/regional",
+            "timeoutMs": 15000
         }
     }
 }

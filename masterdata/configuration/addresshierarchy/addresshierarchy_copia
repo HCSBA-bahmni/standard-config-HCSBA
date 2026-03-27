@@ -3,37 +3,37 @@
   <addressComponents>
       <addressComponent>
       <field>COUNTRY</field>
-      <nameMapping>País</nameMapping>
+      <nameMapping>Country</nameMapping>
       <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
     <addressComponent>
       <field>STATE_PROVINCE</field>
-      <nameMapping>Región</nameMapping>
+      <nameMapping>State</nameMapping>
       <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
     <addressComponent>
       <field>COUNTY_DISTRICT</field>
-      <nameMapping>Provincia</nameMapping>
+      <nameMapping>District</nameMapping>
       <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
     <addressComponent>
       <field>City_village</field>
-      <nameMapping>Comuna</nameMapping>
+      <nameMapping>City/Village</nameMapping>
       <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
     <addressComponent>
       <field>ADDRESS_2</field>
-      <nameMapping>Localidad</nameMapping>
+      <nameMapping>Locality/Sector</nameMapping>
       <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
     <addressComponent>
       <field>ADDRESS_1</field>
-      <nameMapping>Dirección</nameMapping>
+      <nameMapping>House number/Flat number</nameMapping>
       <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>

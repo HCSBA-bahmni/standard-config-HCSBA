@@ -23,73 +23,49 @@ angular.module('bahmni.common.displaycontrol.custom')
     
                 $scope.user_cookie = $cookies.get('bahmni.user');
                 
-                console.log($scope);
+                // Usar el mismo esquema/origen que Bahmni (evita mixed-content y 404 falsos)
+                var baseOrigin = $window.location.protocol + '//' + $window.location.host;
+                var hostfrontend = baseOrigin + '/notificacion';
+                var hostbackend = baseOrigin + '/apinotificacion';
+
+                var safeJson = function(response){
+                    if (!response.ok) return Promise.resolve([]);
+                    var ct = (response.headers.get('content-type') || '').toLowerCase();
+                    if (ct.indexOf('application/json') === -1) return Promise.resolve([]);
+                    return response.json();
+                };
     
-                // Obtener la dirección IP del host
-                //var hostfrontend = $window.location.host + ':8092';
-                //var hostbackend = $window.location.host + ':8093';
-                var hostfrontend = $window.location.host + '/notificacion';
-                var hostbackend = $window.location.host + '/apinotificacion';
-    
-                fetch('http://' + hostbackend + '/ges?patientidentifier=' + $scope.patient.identifier)
-                //fetch('http://127.0.0.1:5001/ges?patientidentifier=' + $scope.patient.identifier)
-                    .then(response => response.json())
-                    .then(data => {
-                        $scope.notificaciones = data;
-                        console.log(data);
+                fetch(hostbackend + '/ges?patientidentifier=' + encodeURIComponent($scope.patient.identifier || ''))
+                    .then(safeJson)
+                    .then(function(data){
+                        $scope.$evalAsync(function(){
+                            $scope.notificaciones = data || [];
+                        });
                     })
-                    .catch(error => console.error(error));
+                    .catch(function(error){ console.error('GES fetch error:', error); });
     
                 $scope.descartarNotificacion = function (id) {
-                    console.log("descartar notificacion" + id);
-    
-                    //actualizar estado de la notificacion con put a la api enviando el id de la notificacion y el estado DESCARTADO
-                    fetch('http://' + hostbackend + '/ges/' + id + '/D?practitioner=' + $scope.user_cookie, {
-                    //fetch('http://127.0.0.1:5001/ges/' + id + '/D?practitioner=' + $scope.user_cookie, {
+                    fetch(hostbackend + '/ges/' + encodeURIComponent(id) + '/D?practitioner=' + encodeURIComponent($scope.user_cookie || '')),
+                    {
                         method: 'PUT',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        }
-                    })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log('Descartar Success:', data);
-    
-                            //actualizar contenido del template
-                            fetch('http://' + hostbackend + '/ges?patientidentifier=' + $scope.patient.identifier)
-                            //fetch('http://127.0.0.1:5001/ges?patientidentifier=' + $scope.patient.identifier)
-                                .then(response => response.json())
-                                .then(data => {
-                                    $scope.$evalAsync(function () {
-                                        $scope.notificaciones = data;
-                                        console.log(data);
-                                    });
-                                })
-                                .catch(error => console.error(error));
+                        headers: { 'Content-Type': 'application/json' }
+                    }
+                    fetch(hostbackend + '/ges?patientidentifier=' + encodeURIComponent($scope.patient.identifier || ''))
+                        .then(safeJson)
+                        .then(function (data) {
+                            $scope.$evalAsync(function () {
+                                $scope.notificaciones = data || [];
+                            });
                         })
-                        .catch((error) => {
-                            console.error('Error:', error);
-                        });
-    
-                }
+                        .catch(function (error) { console.error('GES refresh error:', error); });
+                };
     
                 $scope.Notificar = function (id) {
-                    console.log("Notificar:" + id);
-                    //Abre el formulario para notificar en una nueva ventana del navegador
-                    //agregar en url el prestador desde el scope
-                    //$window.open('http://127.0.0.1:5000/notificacionges/' + id+'?practitioner=' + $scope.user_cookie);
-                    $window.open('http://' + hostfrontend + '/notificacionges/' + id+'?practitioner=' + $scope.user_cookie);
-    
-                    // + '&practitioner=' + $scope.practitioner.uuid);
-    
-                }
+                    $window.open(hostfrontend + '/notificacionges/' + encodeURIComponent(id) + '?practitioner=' + encodeURIComponent($scope.user_cookie || ''));
+                };
                 $scope.VerNotificaciom = function (id) {
-                    console.log("Ver:" + id);
-                    //Abre el formulario para ver la notificacion en una nueva ventana del navegador
-                    //agregar en url el prestador desde el scope
-                    $window.open('http://' + hostfrontend + '/vernotificacionges/' + id);
-                    //$window.open('http://127.0.0.1:5000/vernotificacionges/' + id);
-                }
+                    $window.open(hostfrontend + '/vernotificacionges/' + encodeURIComponent(id));
+                };
             }
             
             return {

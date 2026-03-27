@@ -40,6 +40,7 @@
   "DASHBOARD_TAB_PATIENT_SUMMARY_KEY": "Patient Summary",
   "DASHBOARD_TAB_DISCHARGE_SUMMARY_KEY": "Discharge Summary",
   "DASHBOARD_TAB_ORDERS_KEY": "Orders",
+  "DASHBOARD_TAB_IPS_KEY": "IPS",
 
   "LAB_INVESTIGATIONS_KEY":"Lab Investigations",
   "RADIOLOGY_ORDERS_KEY": "Radiology Orders",
@@ -95,5 +96,6 @@
   "PROGRAM_TREATMENT_DATE": "Treatment Date",
   "PROGRAM_COMORBIDITES": "Co-morbidites",
   "PROGRAM_DOCTORINCHARGE": "Doctor In-Charge",
-  "PROGRAM_PATIENT_STAGE": "Patient Stage"
+  "PROGRAM_PATIENT_STAGE": "Patient Stage",
+  "DASHBOARD_TITLE_IPS_LAC_KEY": "IPS LAC"
 }
