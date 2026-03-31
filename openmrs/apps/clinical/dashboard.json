@@ -452,6 +452,8 @@
                 "translationKey": "DASHBOARD_TITLE_BLOOD_PRESSURE",
                 "config":{
                     "yAxisConcepts":[
+                        "Presión Arterial Sistólica",
+                        "Presión Arterial Diastólica",
                         "Systolic blood pressure",
                         "Diastolic blood pressure"
                     ],
@@ -466,7 +468,8 @@
                 "config":{
                     "yAxisConcepts":[
                         "Weight (kg)",
-                        "BMI"
+                        "BMI",
+                        "IMC"
                     ],
                     "xAxisConcept":"observationDateTime",
                     "numberOfVisits":10
@@ -491,7 +494,8 @@
                 "translationKey": "DASHBOARD_TITLE_PULSE",
                 "config":{
                     "yAxisConcepts":[
-                        "Pulse"
+                        "Pulse",
+                        "Pulso"
                     ],
                     "xAxisConcept":"observationDateTime",
                     "numberOfVisits":10
