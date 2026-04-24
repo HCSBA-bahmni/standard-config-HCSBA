@@ -130,6 +130,16 @@
     "order": 14,
     "requiredPrivilege": "app:appointments"
   },
+  "myAppointmentScheduling": {
+    "id": "bahmni.my.appointment.scheduling",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_MY_APPOINTMENT_SCHEDULING_KEY",
+    "url": "../../my-appointments",
+    "icon": "fa fa-calendar-check-o",
+    "order": 15,
+    "requiredPrivilege": "app:appointments"
+  },
   "labLite": {
     "id": "bahmni.lab",
     "extensionPointId": "org.bahmni.home.dashboard",
@@ -137,7 +147,7 @@
     "translationKey": "MODULE_LABEL_LAB_ENTRY_KEY",
     "url": "/lab",
     "icon": "fa fa-flask",
-    "order": 15,
+    "order": 16,
     "requiredPrivilege": "app:lab-lite"
   }
 }

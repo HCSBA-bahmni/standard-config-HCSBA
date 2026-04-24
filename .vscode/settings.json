@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^Set-Location \"C:/Users/juanj/GitHub/HCSBA/standard-config-HCSBA\"; python -c \"import csv,re,sys,json; csv\\.field_size_limit\\(sys\\.maxsize\\); p=r'masterdata/configuration/concepts/diagnosisSetOfSets\\.csv'; u=re\\.compile\\(r'\\^\\[0-9a-fA-F\\]\\{8\\}-\\[0-9a-fA-F\\]\\{4\\}-\\[0-9a-fA-F\\]\\{4\\}-\\[0-9a-fA-F\\]\\{4\\}-\\[0-9a-fA-F\\]\\{12\\}\\$'\\); rows=list\\(csv\\.reader\\(open\\(p,newline='',encoding='utf-8-sig'\\)\\)\\); h=rows\\[0\\] if rows else \\[\\]; bad=sum\\(1 for r in rows\\[1:\\] if len\\(r\\)!=len\\(h\\)\\); print\\(json\\.dumps\\(\\{'header_looks_like_data': bool\\(h and u\\.match\\(h\\[0\\]\\)\\), 'header_columns': h, 'inconsistent_rows': bad\\}, ensure_ascii=False\\)\\)\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^Set-Location \"C:/Users/juanj/GitHub/HCSBA/standard-config-HCSBA\"; python -c \"import csv,re,sys; csv\\.field_size_limit\\(sys\\.maxsize\\); files=\\['masterdata/configuration/concepts/diagnosisSetOfSets\\.csv','masterdata/configuration/concepts/lab_departments\\.csv','masterdata/configuration/concepts/lab_test_answers\\.csv','masterdata/configuration/concepts/orders\\.csv'\\]; u=re\\.compile\\(r'\\^\\[0-9a-fA-F\\]\\{8\\}-\\[0-9a-fA-F\\]\\{4\\}-\\[0-9a-fA-F\\]\\{4\\}-\\[0-9a-fA-F\\]\\{4\\}-\\[0-9a-fA-F\\]\\{12\\}\\$'\\);\nfor p in files:\n rows=list\\(csv\\.reader\\(open\\(p,newline='',encoding='utf-8-sig'\\)\\)\\); h=rows\\[0\\] if rows else \\[\\]; bad=sum\\(1 for r in rows\\[1:\\] if len\\(r\\)!=len\\(h\\)\\); print\\(f'\\{p\\}: header_data=\\{str\\(bool\\(h and u\\.match\\(h\\[0\\]\\)\\)\\)\\.lower\\(\\)\\}, cols=\\{len\\(h\\)\\}, bad=\\{bad\\}'\\)\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

@@ -1,0 +1,199 @@
+FILE=bacteriology.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=b4f16508-e28c-4109-91fb-b8856753f8e5 ; Fully specified name:en=Bacteriology Date of Xpert test ; Short name:en=Date of Xpert test done
+- uuid=682d611a-ff9c-49b3-9fd9-436b32f0940a ; Fully specified name:en=Bacteriology Xpert test ID number ; Short name:en=Xpert test ID number
+- uuid=962d046b-3f4d-4254-87aa-7d962b862549 ; Fully specified name:en=Bacteriology Xpert MTB result ; Short name:en=Xpert MTB result
+- uuid=0c767bbe-fbfc-4bb5-a9b7-34aa9f07a237 ; Fully specified name:en=Bacteriology Xpert test results ; Short name:en=Xpert test results
+- uuid=3233fae3-0996-4c34-9f48-6d02d77beb7f ; Fully specified name:en=Scanty 1-3
+- uuid=01634d6e-64cb-43ae-9389-39d105a282e0 ; Fully specified name:en=Scanty 4-9
+- uuid=c0f5c294-e37d-49df-82d5-8850976fd0cd ; Fully specified name:en=Not read
+- uuid=f055e799-5ac2-4121-a793-aa636e1e008c ; Fully specified name:en=Bacteriology Smear result
+- uuid=81589741-9648-440f-aa14-21162a3dd561 ; Fully specified name:en=Bacteriology Smear test lab ID number ; Short name:en=Smear test lab ID number
+- uuid=acbda3c6-5bd1-4602-88e3-63db896cdddb ; Fully specified name:en=Bacteriology Diagnosed with other Symptom ; Short name:en=Diagnosed with other Symptom
+- uuid=aa73a6a3-0375-46c9-903d-037240fbb23c ; Fully specified name:en=Bacteriology Date of AFB smear ; Short name:en=Date of AFB smear
+- uuid=d18150f7-c730-4d67-80f9-c8d0c42d1f1a ; Fully specified name:en=Bacteriology Smear microscopy test results
+---
+FILE=diabetesConcepts.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=9bb0795c-4ff0-0305-1990-000000000010 ; Fully specified name:en=Diabetes, Diabetes Type ; Fully specified name:fr=Diabetes type
+- uuid=9bb0795c-4ff0-0305-1990-000000000011 ; Fully specified name:en=Diabetes, Last known A1C Result ; Fully specified name:fr=Last known A1C Result
+- uuid=9bb0795c-4ff0-0305-1990-000000000012 ; Fully specified name:en=Diabetes, Last HbA1c Date ; Fully specified name:fr=Last HbA1c Date
+- uuid=81838fef-7c3b-43ab-82d5-7f6c7cccd697 ; Fully specified name:en=Diabetes, Intake ; Short name:en=Diabetes – Intake
+---
+FILE=diagnosisSetOfSets.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en
+- Fully specified name:en=Unclassified
+- uuid=066d1f0f-6303-46d8-99fa-c9278b60a072 ; Fully specified name:en=Diagnosis Set of Sets
+---
+FILE=dosingUnits.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=161553AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ; Fully specified name:en=Milligram ; Short name:en=mg ; Description:en=Unit of measurement of mass
+- uuid=162263AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ; Fully specified name:en=Milliliter ; Short name:en=mL ; Description:en=Unit of measurement 1/1000 of a liter
+- uuid=162264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ; Fully specified name:en=International units ; Short name:en=IU ; Description:en=Unit of measurement
+- Fully specified name:en=Dosing Units ; Short name:en=dosing units
+---
+FILE=drugForms.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=9bb0795c-4ff0-0305-1990-000000000034 ; Fully specified name:en=Injection
+- uuid=9bb0795c-4ff0-0305-1990-000000000035 ; Fully specified name:en=Drops
+- uuid=9bb0795c-4ff0-0305-1990-000000000036 ; Fully specified name:en=Jelly
+- uuid=9bb0795c-4ff0-0305-1990-000000000037 ; Fully specified name:en=Pessary
+---
+FILE=FormConcepts.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=9bb0795c-4ff0-0305-1990-000000000001 ; Fully specified name:en=Other generic ; Short name:en=Other
+- uuid=9bb0795c-4ff0-0305-1990-000000000002 ; Fully specified name:en=Chief Complaint Coded ; Short name:en=Chief Complaint
+- uuid=9bb0795c-4ff0-0305-1990-000000000003 ; Fully specified name:en=Chief Complaint Duration ; Short name:en=Units ; Description:en=The units which correspond to the numeric value entered for a duration
+- uuid=9bb0795c-4ff0-0305-1990-000000000005 ; Fully specified name:en=Image
+- uuid=9bb0795c-4ff0-0305-1990-000000000006 ; Fully specified name:en=Consultation Images
+- uuid=9bb0795c-4ff0-0305-1990-000000000007 ; Fully specified name:en=Patient Video
+- uuid=9bb0795c-4ff0-0305-1990-000000000008 ; Fully specified name:en=Range of Motion
+- uuid=9bb0795c-4ff0-0305-1990-000000000009 ; Fully specified name:en=Radiographic Examination
+- uuid=9bb0795c-4ff0-0305-1990-000000000013 ; Fully specified name:en=Duration of smoking (years) ; Short name:en=Duration of smoking (in years) ; Description:en=For how long some one is smoking/smoked cigarettes or other forms of tobacco, measured in years.
+- uuid=9bb0795c-4ff0-0305-1990-000000000014 ; Fully specified name:en=Liters of alcohol consumed (per day) ; Short name:en=Liters of alcohol consumed per day ; Description:en=Amount of alcohol consumed per day measured in liter.
+- uuid=9bb0795c-4ff0-0305-1990-000000000015 ; Fully specified name:en=ACD - Active Case Detection
+- uuid=9bb0795c-4ff0-0305-1990-000000000016 ; Fully specified name:en=PCD - Passive Case Detection
+- uuid=9bb0795c-4ff0-0305-1990-000000000017 ; Fully specified name:en=Malaria, Source ; Short name:en=Source
+- uuid=9bb0795c-4ff0-0305-1990-000000000018 ; Fully specified name:en=Foot examination ; Short name:en=Foot examination
+- uuid=9bb0795c-4ff0-0305-1990-000000000019 ; Fully specified name:en=Last eye exam date ; Short name:en=Last eye exam date
+- uuid=9bb0795c-4ff0-0305-1990-000000000020 ; Fully specified name:en=Temperature ; Short name:en=Temperature ; Description:en=Patient's temperature in Fahrenheit
+- uuid=9bb0795c-4ff0-0305-1990-000000000021 ; Fully specified name:en=Registration Fee ; Short name:en=Registration Fee
+- uuid=9bb0795c-4ff0-0305-1990-000000000022 ; Fully specified name:en=Doctor Name ; Short name:en=Doctor Name
+- uuid=9bb0795c-4ff0-0305-1990-000000000023 ; Fully specified name:en=Consultation Fee ; Short name:en=Consultation Fee
+- uuid=9bb0795c-4ff0-0305-1990-000000000024 ; Fully specified name:en=Hypertension, Hypertensive Emergency 12 Months ; Short name:en=Hypertensive Emergency or Cardiac Hospitalization in 12 Months
+- uuid=9bb0795c-4ff0-0305-1990-000000000025 ; Fully specified name:en=Hypertension, Hypertensive Emergency Cause ; Short name:en=Hypertensive Emergency or Cardiac Hospitalization For
+- uuid=9bb0795c-4ff0-0305-1990-000000000026 ; Fully specified name:en=Last serum creatinine date
+- uuid=9bb0795c-4ff0-0305-1990-000000000027 ; Fully specified name:en=Last LDL date
+- uuid=9bb0795c-4ff0-0305-1990-000000000028 ; Fully specified name:en=BMI Status ; Short name:en=BMI Status
+- uuid=9bb0795c-4ff0-0305-1990-000000000029 ; Fully specified name:en=Consultation Videos
+- uuid=9bb0795c-4ff0-0305-1990-000000000030 ; Fully specified name:en=Cephalic ; Short name:en=Cephalic
+- uuid=9bb0795c-4ff0-0305-1990-000000000031 ; Fully specified name:en=Breech ; Short name:en=Breech
+- uuid=9bb0795c-4ff0-0305-1990-000000000032 ; Fully specified name:en=Transverse ; Short name:en=Transverse
+- uuid=9bb0795c-4ff0-0305-1990-000000000033 ; Fully specified name:en=P/A Presenting Part ; Short name:en=P/A Presenting Part
+- uuid=9bb0795c-4ff0-0305-1990-000000000038 ; Fully specified name:en=Treatment plan
+- uuid=9bb0795c-4ff0-0305-1990-000000000039 ; Fully specified name:en=Rest duration
+- uuid=9bb0795c-4ff0-0305-1990-000000000040 ; Fully specified name:en=Comments ; Short name:en=Comments
+- uuid=9bb0795c-4ff0-0305-1990-000000000041 ; Fully specified name:en=Referring to Hospital ; Short name:en=Referring to Hospital
+- uuid=9bb0795c-4ff0-0305-1990-000000000042 ; Fully specified name:en=Referred to ; Short name:en=Referred to
+- uuid=9bb0795c-4ff0-0305-1990-000000000043 ; Fully specified name:en=Relevant clinical history ; Short name:en=Relevant clinical history
+- uuid=9bb0795c-4ff0-0305-1990-000000000044 ; Fully specified name:en=Treatment provided ; Short name:en=Treatment provided
+- uuid=9bb0795c-4ff0-0305-1990-000000000045 ; Fully specified name:en=Referred to Doctor ; Short name:en=Referred to Doctor
+- uuid=631f9e92-b15f-41da-a6ba-4f4cd67f36b7 ; Fully specified name:en=Blood Pressure ; Short name:en=Blood Pressure
+- uuid=da47a35d-5806-48b7-b467-e29902759491 ; Fully specified name:en=Chief Complaint Record ; Short name:en=Chief Complaint Record
+---
+FILE=lab_departments.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=0001fdca-769d-47e4-8397-1c73c8bad34b ; Fully specified name:en=Biochemistry Department ; Short name:en=Biochemistry
+- uuid=50975c1d-ae6a-4e8a-90cd-172a1e55156c ; Fully specified name:en=Pathology Department ; Short name:en=Pathology
+- uuid=2c87f0c0-9b9b-4c8b-ae96-20e6361f21d5 ; Fully specified name:en=Haematology Lab Department ; Short name:en=Haematology
+- uuid=5a950b75-e24c-438d-9e64-5795c6cb921b ; Fully specified name:en=Histopathology Department ; Short name:en=Histopathology
+- uuid=af18babe-99b0-44f4-ac7a-88b3d91a0c2a ; Fully specified name:en=Serology Department ; Short name:en=Serology
+- uuid=3c3ba267-033d-4433-abd6-49adce15e315 ; Fully specified name:en=Microbiology Department ; Short name:en=Microbiology
+---
+FILE=lab_samples.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en
+- uuid=0166bbd5-8609-4c78-b830-53512a4cbbd3 ; Fully specified name:en=Blood Specimen ; Short name:en=Blood
+- uuid=1d372353-ff56-49d4-97dd-5274fd460156 ; Fully specified name:en=Tissue Specimen ; Short name:en=Tissue
+- uuid=43d31d4d-01a0-47b1-854f-545d57a0c78f ; Fully specified name:en=Skin Specimen ; Short name:en=Skin
+- uuid=4a716a48-08db-4ecb-b1ae-5b528f369d88 ; Fully specified name:en=Urethral fluid ; Short name:en=Urethral fluid
+- uuid=8578dd94-a066-4851-bb9f-1c7c03360d8b ; Fully specified name:en=Other Specimen ; Short name:en=Others
+---
+FILE=lab_test_answers.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en
+- uuid=616af5ad-024b-4e30-8d6f-3459532d7606 ; Fully specified name:en=Herpes simplex type 1 ; Short name:en=Herpes simplex type 1
+- uuid=58643b97-510f-4670-aabc-f9059b2da5fc ; Fully specified name:en=Herpes simplex type 2 ; Short name:en=Herpes simplex type 2
+- uuid=9b12a467-202d-474d-9960-4bf142738c55 ; Fully specified name:en=Genus Cryptosporidium ; Short name:en=Cryptosporidium
+- uuid=ac743286-fad4-46f4-be31-71bc75ad1558 ; Fully specified name:en=Cyclospora cayetanensis ; Short name:en=Cyclospora cayetanensis
+- uuid=606a1315-647d-45b3-a9b2-bde000231c9c ; Fully specified name:en=Hookworm ; Short name:en=Hookworm
+- uuid=cdfcd2cf-b761-4b69-86a1-c35cd4b32e2e ; Fully specified name:en=Flatworm ; Short name:en=Flatworm
+- uuid=31fa5476-62d2-4c53-bc42-7ea97060b9cf ; Fully specified name:en=Tapeworm ; Short name:en=Tapeworm
+- uuid=45269220-51b0-4675-94fd-b270d414c586 ; Fully specified name:en=Roundworm ; Short name:en=Roundworm
+---
+FILE=notifiableDisease.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=99aabbcc-4ff0-0305-1990-000000000001 ; Fully specified name:en=Notifiable Disease
+---
+FILE=orders.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en
+- Fully specified name:en=All Orderables ; Short name:en=All Orderables
+---
+FILE=patientDocument.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=e53c2ed9-6c23-4683-ad9e-12c2a5d780d8 ; Fully specified name:en=Prescription ; Short name:en=Prescription
+- uuid=509a4f39-5ce3-4e88-ab71-aa6ac7ced029 ; Fully specified name:en=Referral Documents ; Short name:en=Referral Documents
+- uuid=94ea9aba-a82c-4e54-9c11-722d97ae54b8 ; Fully specified name:en=Patient File ; Short name:en=Patient File
+- uuid=e41ef81f-4706-41fd-9589-ad47761221ea ; Fully specified name:en=Radiology Report ; Short name:en=Radiology Report
+- uuid=4cf781ad-247a-4691-abc9-e5724d60842a ; Fully specified name:en=Discharge Summary ; Short name:en=Discharge Summary
+- uuid=252822fc-9d7d-4e80-8886-d7aa62b02c52 ; Fully specified name:en=Patient Document ; Short name:en=Patient Document
+---
+FILE=patientDocumentTypes.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=56ca5f5a-0273-44ae-acbf-fda5dbc70054 ; Fully specified name:en=Document Types ; Short name:en=Document Types
+---
+FILE=procedure_sections.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=b98d995b-491e-410d-b1a7-8c4c3e3cf31e ; Fully specified name:en=Spine ; Short name:en=Spine
+- uuid=bb718d23-92ed-4159-bd34-3f641a17a26b ; Fully specified name:en=Biopsy ; Short name:en=Biopsy
+- uuid=8207d4b8-c854-4e49-b754-22d1630f9bc3 ; Fully specified name:en=Endoscopy ; Short name:en=Endoscopy
+- uuid=12da7334-41d7-4f93-a60b-a22a9cc3074c ; Fully specified name:en=Oncology ; Short name:en=Oncology
+- uuid=0d702c5b-ace4-4ff1-ab62-748831bd93d9 ; Fully specified name:en=Other Procedures ; Short name:en=Others
+- uuid=6a8bb973-e61e-4fbb-b7ca-94ebf163874e ; Fully specified name:en=Procedure Orders ; Fully specified name:fr=Procedure Orders
+---
+FILE=program_HIV.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en
+- uuid=fa30920e-7d8b-4f10-a123-8ac18fcf64cf ; Fully specified name:en=Cured of HIV ; Short name:en=Cured of HIV
+- uuid=8637dcd6-05ac-49b3-9717-39c676d4fb2a ; Fully specified name:en=HIV Outcome ; Short name:en=HIV outcome
+- uuid=1c3363ea-2c60-442f-b9e7-c4ceda50dff2 ; Fully specified name:en=Acute Retroviral Infection ; Short name:en=Acute Retroviral Infection
+- uuid=8ed76778-da7c-4a35-b2c9-fa74fb59a2e0 ; Fully specified name:en=Clinical Stage 1 ; Short name:en=Clinical Stage 1
+- uuid=54dbcd5d-6553-4f25-b2d9-f01eee6c9fb7 ; Fully specified name:en=Clinical Stage 2 ; Short name:en=Clinical Stage 2
+- uuid=56b02820-10a2-4220-9418-dc9a9ed60d86 ; Fully specified name:en=Clinical Stage 3 ; Short name:en=Clinical Stage 3
+- uuid=852acec3-4b01-4736-9ed8-69272437a6d2 ; Fully specified name:en=HIV Program workflow ; Short name:en=workflow for HIV Program
+---
+FILE=program_TB.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en
+- uuid=deb3593a-2aab-413a-9cd4-b6368f615b44 ; Fully specified name:en=Cured ; Short name:en=Cured
+- uuid=5b86693e-9df0-49af-a58f-c50fc0247ed0 ; Fully specified name:en=Lost to Follow Up ; Short name:en=Lost to Follow Up
+- uuid=438652e4-aa63-44d3-96b6-4a814aa4b76f ; Fully specified name:en=TB Outcome ; Short name:en=TB Outcome
+- uuid=ec4988a4-3ecb-4bdc-a3f8-8968d3fad281 ; Fully specified name:en=Sputum Positive ; Short name:en=Sputum Positive
+- uuid=aec5b00f-f46d-4165-8d0d-968fba69d1b5 ; Fully specified name:en=Continued Treatment Phase ; Short name:en=Continued Treatment Phase
+- uuid=6839d38b-8ada-4d3e-8ecd-70fec1f4d3ff ; Fully specified name:en=TB Program workflow ; Short name:en=workflow for TB Program
+---
+FILE=programConcepts.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en
+- uuid=b5a4b35a-bcf7-4245-93b3-b4291d029508 ; Fully specified name:en=Initial Stage ; Short name:en=Initial Stage
+- uuid=8e8536ed-67fe-488e-8ae3-bdcf8b3a2128 ; Fully specified name:en=Stage 1 ; Short name:en=Stage 1
+- uuid=a54e01cf-6d5a-4c46-8c8f-a7058d4fa22a ; Fully specified name:en=Stage 2 ; Short name:en=Stage 2
+- uuid=2e574759-be1b-409e-ae0c-d6f7842cdfd7 ; Fully specified name:en=Final Stage ; Short name:en=Final Stage
+- uuid=ebdf9113-6d27-42a4-8251-642a741a2106 ; Fully specified name:en=Health Stage ; Short name:en=Health Stage
+---
+FILE=radiology_order_fulfillment.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=ae6e5490-ade9-486e-8268-9e4efd45b07e ; Fully specified name:en=Radiology Notes ; Short name:en=Radiology Notes
+- uuid=4e7ac8d1-38fa-461c-8b3a-aa66049369ba ; Fully specified name:en=Diagnostic Images ; Short name:en=Images
+- uuid=cf1844e6-d734-4e24-8a26-1f48f8e54ebb ; Fully specified name:en=Summary
+- uuid=2e820990-e709-4c57-bfa2-ba71b66bd717 ; Fully specified name:en=Radiology order fulfillment form
+---
+FILE=radiology_order_sections.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en | Fully specified name:fr | Short name:fr | Description:fr
+- uuid=1c64dbbe-9fad-4d1d-b81a-57065ee67fb5 ; Fully specified name:en=Head and Neck ; Short name:en=Head and Neck
+- uuid=4e629d3d-819a-4c24-91a2-0bc038d13329 ; Fully specified name:en=Back ; Short name:en=Back
+- uuid=82cb3652-febf-4394-98c0-4249c3ca5e45 ; Fully specified name:en=Angiography ; Short name:en=Angiography
+- uuid=4f8c4867-c4a8-411e-8983-f694d6a1b66b ; Fully specified name:en=Nuclear medicine ; Short name:en=Nuclear medicine
+- uuid=5d3e948a-311a-48e5-b45e-fa0dcd158056 ; Fully specified name:en=Magnetic Resonance Imaging ; Short name:en=MRI
+- uuid=4573be0e-1370-4c36-b932-ac320ebd5c00 ; Fully specified name:en=CT Scan ; Short name:en=CT Scan
+- uuid=26b938d8-2cd4-44a3-b667-eb46b6aa0b7b ; Fully specified name:en=Ultrasound ; Short name:en=Ultrasound
+- uuid=0301d44d-e4e9-4c73-9e54-d59d02a59353 ; Fully specified name:en=Echo ; Short name:en=Echo
+- uuid=e74c896c-8e9a-49b2-bce1-5265064f9450 ; Fully specified name:en=Other Radiology Orders ; Short name:en=Others
+- uuid=9bb0795c-4ff0-0305-1990-000000000048 ; Fully specified name:en=Radiology Orders ; Fully specified name:fr=Radiology Orders
+---
+FILE=radiologySetOfSets.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en
+- uuid=05d53977-443c-4883-a1f8-ea265fdaaf39 ; Fully specified name:en=All Radiology orders ; Short name:en=All Radiology orders
+---
+FILE=taskTypes_example.csv
+HEADER=uuid | Fully specified name:en | Short name:en | Description:en
+- uuid=a0eb13f7-0cd8-4e40-a03b-c8091ac05c89 ; Fully specified name:en=Measurement procedure ; Short name:en=Measurement procedure ; Description:en=Used for recording and tracking patient measurement procedure
+- uuid=785e3bf3-5dc2-43a9-b90c-694469fbea0c ; Fully specified name:en=Medication administration assessment ; Short name:en=Medication administration assessment ; Description:en=Used for recording and tracking medication administration assessment
+- uuid=996b6a90-1005-4ce0-a022-9ef85ffe1886 ; Fully specified name:en=Multidisciplinary assessment ; Short name:en=Multidisciplinary assessment ; Description:en=Used for recording and tracking multidisciplinary assessment
+- uuid=88968b6e-14b6-4633-87ca-3ccf6843741d ; Fully specified name:en=All Task Types ; Short name:en=All Task Types ; Description:en=Encompasses all different types of tasks in the system
+---
