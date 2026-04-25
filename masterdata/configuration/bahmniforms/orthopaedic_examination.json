@@ -12,7 +12,7 @@
         "uuid": "226ba2f3-9775-4392-84b2-75b8affe6c6a"
       },
       {
-        "value": "[{\"display\":\"Orthopaedic Examination\",\"locale\":\"en\"}]",
+        "value": "[{\"display\":\"Orthopaedic Examination\",\"locale\":\"en\"},{\"display\":\"Examen ortopedico\",\"locale\":\"es\"}]",
         "dataType": "org.bahmni.customdatatype.datatype.FormNameTranslationDatatype",
         "uuid": "385a7393-2242-4e58-b6fd-2cff1806dd46"
       }
@@ -28,6 +28,20 @@
         "RANGE_OF_MOTION_2": "Range of Motion"
       },
       "formName": "Orthopaedic Examination",
+      "formUuid": null,
+      "version": "1",
+      "referenceVersion": null,
+      "referenceFormUuid": null
+    },
+    {
+      "locale": "es",
+      "labels": {},
+      "concepts": {
+        "MUSCULOSKELETAL_EXAMINATION_(TEXT)_1": "Examen musculoesqueletico (texto)",
+        "RADIOGRAPHIC_EXAMINATION_3": "Examen radiografico",
+        "RANGE_OF_MOTION_2": "Rango de movimiento"
+      },
+      "formName": "Examen ortopedico",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

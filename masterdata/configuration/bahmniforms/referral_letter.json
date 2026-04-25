@@ -31,6 +31,24 @@
       "version": "1",
       "referenceVersion": null,
       "referenceFormUuid": null
+    },
+    {
+      "locale": "es",
+      "labels": {
+        "LABEL_6": "Nota: vaya a la seccion de impresion en el panel del paciente para imprimir los certificados."
+      },
+      "concepts": {
+        "REASON_FOR_REFERRAL_(TEXT)_2_DESC": "Motivo de referencia no codificado / en texto",
+        "REFERRED_TO_1": "Referido a",
+        "REASON_FOR_REFERRAL_(TEXT)_2": "Motivo de referencia (texto)",
+        "RELEVANT_CLINICAL_HISTORY_4": "Antecedentes clinicos relevantes",
+        "TREATMENT_PROVIDED_5": "Tratamiento proporcionado"
+      },
+      "formName": "Carta de referencia",
+      "formUuid": null,
+      "version": "1",
+      "referenceVersion": null,
+      "referenceFormUuid": null
     }
   ]
 }

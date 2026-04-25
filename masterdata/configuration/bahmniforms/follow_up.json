@@ -11,7 +11,7 @@
         "uuid": "469d89f7-be00-4fc1-8ad9-74638f959344"
       },
       {
-        "value": "[{\"display\":\"Follow Up\",\"locale\":\"en\"}]",
+        "value": "[{\"display\":\"Follow Up\",\"locale\":\"en\"},{\"display\":\"Seguimiento\",\"locale\":\"es\"}]",
         "dataType": "org.bahmni.customdatatype.datatype.FormNameTranslationDatatype",
         "uuid": "ce3bba8a-83a3-4021-acc1-c7d3e6313348"
       }
@@ -27,6 +27,20 @@
         "RETURN_VISIT_DATE_1": "Return visit date"
       },
       "formName": "Follow Up",
+      "formUuid": null,
+      "version": "1",
+      "referenceVersion": null,
+      "referenceFormUuid": null
+    },
+    {
+      "locale": "es",
+      "labels": {},
+      "concepts": {
+        "REASON_FOR_VISIT_2": "Motivo de la visita",
+        "RETURN_VISIT_DATE_1_DESC": "El paciente debe regresar en esta fecha",
+        "RETURN_VISIT_DATE_1": "Fecha de proxima visita"
+      },
+      "formName": "Seguimiento",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

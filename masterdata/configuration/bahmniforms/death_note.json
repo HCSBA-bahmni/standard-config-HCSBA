@@ -12,7 +12,7 @@
         "uuid": "25c026e4-2676-4731-9a45-92a72e154fb6"
       },
       {
-        "value": "[{\"display\":\"Death Note\",\"locale\":\"en\"}]",
+        "value": "[{\"display\":\"Death Note\",\"locale\":\"en\"},{\"display\":\"Nota de defuncion\",\"locale\":\"es\"}]",
         "dataType": "org.bahmni.customdatatype.datatype.FormNameTranslationDatatype",
         "uuid": "d7609e2a-f183-46d6-b3d1-ff484d47d891"
       }
@@ -39,6 +39,31 @@
         "NATURAL_DEATH_2": "Natural Death"
       },
       "formName": "Death Note",
+      "formUuid": null,
+      "version": "1",
+      "referenceVersion": null,
+      "referenceFormUuid": null
+    },
+    {
+      "locale": "es",
+      "labels": {},
+      "concepts": {
+        "POSTOPERATIVE_DEATH_2": "Muerte posoperatoria",
+        "INTRAPARTUM_MATERNAL_DEATH_2": "Muerte materna intraparto",
+        "PROBABLE_CAUSE_OF_DEATH_2_DESC": "Causa probable de muerte del paciente a partir de la entrevista con un familiar u otro personal no medico como parte del cuestionario del registro de defuncion.",
+        "NATURAL_DEATH_REPORTABLE_TO_MEDICOLEGAL_AUTHORITY_2": "Muerte natural notificable a la autoridad medico-legal",
+        "DATE_OF_DEATH_1": "Fecha de defuncion",
+        "CAUSE_OF_DEATH,_NON-CODED_(TEXT)_3": "Causa de muerte",
+        "POSTPARTUM_MATERNAL_DEATH_2": "Muerte materna posparto",
+        "ANTEPARTUM_MATERNAL_DEATH_2": "Muerte materna anteparto",
+        "DEAD_ON_ARRIVAL_AT_HOSPITAL_4": "Fallecido al llegar",
+        "NO_4": "No",
+        "OTHER_GENERIC_2": "Otro",
+        "PROBABLE_CAUSE_OF_DEATH_2": "Causa probable de muerte",
+        "YES_4": "Si",
+        "NATURAL_DEATH_2": "Muerte natural"
+      },
+      "formName": "Nota de defuncion",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

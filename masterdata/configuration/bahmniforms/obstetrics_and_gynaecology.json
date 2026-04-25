@@ -37,6 +37,30 @@
       "version": "1",
       "referenceVersion": null,
       "referenceFormUuid": null
+    },
+    {
+      "locale": "es",
+      "labels": {},
+      "concepts": {
+        "FETAL_HEART_RATE_6": "Frecuencia cardiaca fetal",
+        "FUNDAL_HEIGHT_1_DESC": "altura del fondo uterino en centímetros durante el examen del embarazo",
+        "NO_4": "No",
+        "CEPHALIC_2": "Cefálico",
+        "DATE_OF_LAST_MENSTRUAL_PERIOD_5": "Fecha de la última menstruación",
+        "BREECH_DELIVERY_2": "Presentación podálica",
+        "DATE_OF_LAST_MENSTRUAL_PERIOD_5_DESC": "Fecha de la última menstruación para una mujer en edad fértil.",
+        "FUNDAL_HEIGHT_1": "Altura uterina",
+        "YES_4": "Sí",
+        "FETAL_HEART_RATE_PRESENT_4": "Frecuencia cardíaca fetal presente",
+        "P/A_PRESENTING_PART_2": "Parte presentada en abdomen",
+        "UNKNOWN_4": "Desconocido",
+        "TRANSVERSE_2": "Transverso"
+      },
+      "formName": "Obstetricia y ginecología",
+      "formUuid": null,
+      "version": "1",
+      "referenceVersion": null,
+      "referenceFormUuid": null
     }
   ]
 }
