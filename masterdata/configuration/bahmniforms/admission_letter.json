@@ -24,7 +24,7 @@
         "COMMENTS_5": "Comments",
         "REFERRED_TO_DOCTOR_9": "Referred to Doctor"
       },
-      "formName": "Admission Letter",
+      "FORM_NAME": "Admission Letter",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -40,7 +40,7 @@
         "COMMENTS_5": "Comentarios",
         "REFERRED_TO_DOCTOR_9": "Medico remitente"
       },
-      "formName": "Carta de admision",
+      "FORM_NAME": "Carta de admision",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

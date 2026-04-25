@@ -26,7 +26,7 @@
         "DIABETES,_LAST_KNOWN_A1C_RESULT_3": "Last known A1C Result",
         "DATE_OF_LAST_PATIENT_VISIT_1": "Date of last patient visit"
       },
-      "formName": "Diabetes Progress",
+      "FORM_NAME": "Diabetes Progress",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -45,7 +45,7 @@
         "DIABETES,_LAST_KNOWN_A1C_RESULT_3": "Último resultado conocido de A1C",
         "DATE_OF_LAST_PATIENT_VISIT_1": "Fecha de la última visita del paciente"
       },
-      "formName": "Progreso de diabetes",
+      "FORM_NAME": "Progreso de diabetes",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

@@ -54,7 +54,7 @@
         "DIPTHERIA_TETANUS_BOOSTER_5": "Diptheria tetanus booster",
         "IMMUNIZATION,_NON-CODED_9": "Immunization, non-coded"
       },
-      "formName": "Immunization Incident Record",
+      "FORM_NAME": "Immunization Incident Record",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -101,7 +101,7 @@
         "DIPTHERIA_TETANUS_BOOSTER_5": "Refuerzo contra difteria y tétanos",
         "IMMUNIZATION,_NON-CODED_9": "Inmunización no codificada"
       },
-      "formName": "Registro de incidentes de inmunización",
+      "FORM_NAME": "Registro de incidentes de inmunización",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

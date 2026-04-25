@@ -23,7 +23,7 @@
         "REST_DURATION_2": "Rest duration",
         "TREATMENT_PLAN_1": "Treatment plan"
       },
-      "formName": "Under Treatment and Fitness Certificate",
+      "FORM_NAME": "Under Treatment and Fitness Certificate",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -38,7 +38,7 @@
         "REST_DURATION_2": "Duracion del reposo",
         "TREATMENT_PLAN_1": "Plan de tratamiento"
       },
-      "formName": "Certificado de tratamiento y aptitud",
+      "FORM_NAME": "Certificado de tratamiento y aptitud",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

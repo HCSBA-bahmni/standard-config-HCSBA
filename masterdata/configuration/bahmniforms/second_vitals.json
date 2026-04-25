@@ -68,7 +68,7 @@
         "BLOOD_PRESSURE_19": "Blood Pressure",
         "ARTERIAL_BLOOD_OXYGEN_SATURATION_(PULSE_OXIMETER)_15": "Arterial blood oxygen saturation (pulse oximeter)"
       },
-      "formName": "Second Vitals",
+      "FORM_NAME": "Second Vitals",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -102,7 +102,7 @@
         "BLOOD_PRESSURE_19": "Presion arterial",
         "ARTERIAL_BLOOD_OXYGEN_SATURATION_(PULSE_OXIMETER)_15": "Saturacion arterial de oxigeno (oximetro de pulso)"
       },
-      "formName": "Segundos signos vitales",
+      "FORM_NAME": "Segundos signos vitales",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

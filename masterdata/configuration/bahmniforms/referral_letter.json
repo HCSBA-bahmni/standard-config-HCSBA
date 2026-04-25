@@ -26,7 +26,7 @@
         "RELEVANT_CLINICAL_HISTORY_4": "Relevant clinical history",
         "TREATMENT_PROVIDED_5": "Treatment provided"
       },
-      "formName": "Referral letter",
+      "FORM_NAME": "Referral letter",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -44,7 +44,7 @@
         "RELEVANT_CLINICAL_HISTORY_4": "Antecedentes clinicos relevantes",
         "TREATMENT_PROVIDED_5": "Tratamiento proporcionado"
       },
-      "formName": "Carta de referencia",
+      "FORM_NAME": "Carta de referencia",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

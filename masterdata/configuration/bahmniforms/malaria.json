@@ -53,7 +53,7 @@
         "POSITIVE_FOR_PLASMODIUM_VIVAX_3": "Positive for Plasmodium vivax",
         "RAPID_TEST_FOR_MALARIA_3": "Rapid test for malaria"
       },
-      "formName": "Malaria",
+      "FORM_NAME": "Malaria",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -98,7 +98,7 @@
         "POSITIVE_FOR_PLASMODIUM_VIVAX_3": "Positivo para Plasmodium vivax",
         "RAPID_TEST_FOR_MALARIA_3": "Prueba rapida para malaria"
       },
-      "formName": "Malaria",
+      "FORM_NAME": "Malaria",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

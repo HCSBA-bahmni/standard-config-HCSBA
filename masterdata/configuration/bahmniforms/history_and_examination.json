@@ -104,7 +104,7 @@
         "PATIENT_VIDEO_21": "Patient Video",
         "OTHER_GENERIC_26": "Other generic"
       },
-      "formName": "History and Examination",
+      "FORM_NAME": "History and Examination",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -200,7 +200,7 @@
         "PATIENT_VIDEO_21": "Video del paciente",
         "OTHER_GENERIC_26": "Otro genérico"
       },
-      "formName": "Historia y examen",
+      "FORM_NAME": "Historia y examen",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

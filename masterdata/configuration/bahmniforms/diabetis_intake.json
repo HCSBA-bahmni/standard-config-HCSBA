@@ -120,7 +120,7 @@
                 "DIABETES_MELLITUS,_TYPE_2_42": "Diabetes mellitus, type 2",
                 "CURRENTLY_36": "Currently"
             },
-            "formName": "Diabetes Intake",
+            "FORM_NAME": "Diabetes Intake",
             "formUuid": null,
             "version": "1",
             "referenceVersion": null,
@@ -232,7 +232,7 @@
                 "DIABETES_MELLITUS,_TYPE_2_42": "Diabetes mellitus tipo 2",
                 "CURRENTLY_36": "Actualmente"
             },
-            "formName": "Ingreso por diabetes",
+            "FORM_NAME": "Ingreso por diabetes",
             "formUuid": null,
             "version": "1",
             "referenceVersion": null,
