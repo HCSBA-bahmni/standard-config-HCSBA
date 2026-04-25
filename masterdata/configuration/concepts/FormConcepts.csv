@@ -16,6 +16,8 @@ Uuid,Void/Retire,Same as mappings,Fully specified name:en,Short name:en,Descript
 9bb0795c-4ff0-0305-1990-000000000019,,,Last eye exam date,Last eye exam date,,,,,Fecha del ultimo examen ocular,Fecha del ultimo examen ocular,,Misc,Date,,,,,,,,,,,
 9bb0795c-4ff0-0305-1990-000000000020,,,Temperature,Temperature,Patient's temperature in Fahrenheit,,,,Temperatura,Temperatura,Temperatura del paciente en Fahrenheit,Misc,Numeric,,,,Yes,F,95.0,99.6,,,,
 9bb0795c-4ff0-0305-1990-000000000021,,,Registration Fee,Registration Fee,,,,,Tarifa de registro,Tarifa de registro,,Misc,Numeric,,,,TRUE,,,,,,,
+d71b782e-5e07-11ef-8f7c-0242ac120002,,,REGISTRATION_CONCEPTS,,,,,,REGISTRATION_CONCEPTS,,,ConvSet,Numeric,,,,FALSE,,,,,,,
+d36dd2e4-5e07-11ef-8f7c-0242ac120002,,org.openmrs.module.emrapi:ADMIT,Admit Patient,Admit Patient,,,,,Admit Patient,Admit Patient,,Misc,N/A,,,,,,,,,,,
 9bb0795c-4ff0-0305-1990-000000000022,,,Doctor Name,Doctor Name,,,,,Nombre del medico,Nombre del medico,,Misc,Text,,,,,,,,,,,
 9bb0795c-4ff0-0305-1990-000000000023,,,Consultation Fee,Consultation Fee,,,,,Tarifa de consulta,Tarifa de consulta,,Misc,Numeric,,,,TRUE,,,,,,,
 9bb0795c-4ff0-0305-1990-000000000024,,,"Hypertension, Hypertensive Emergency 12 Months",Hypertensive Emergency or Cardiac Hospitalization in 12 Months,,,,,"Hipertension, emergencia hipertensiva 12 meses",Emergencia hipertensiva u hospitalizacion cardiaca en 12 meses,,Misc,Boolean,,,,,,,,,,,
