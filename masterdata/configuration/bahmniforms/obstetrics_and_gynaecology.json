@@ -32,7 +32,7 @@
         "UNKNOWN_4": "Unknown",
         "TRANSVERSE_2": "Transverse"
       },
-      "FORM_NAME": "Obstetrics and Gynaecology",
+      "formName": "Obstetrics and Gynaecology",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -56,7 +56,7 @@
         "UNKNOWN_4": "Desconocido",
         "TRANSVERSE_2": "Transverso"
       },
-      "FORM_NAME": "Obstetricia y ginecología",
+      "formName": "Obstetricia y ginecología",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

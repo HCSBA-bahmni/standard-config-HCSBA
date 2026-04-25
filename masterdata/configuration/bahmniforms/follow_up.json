@@ -12,7 +12,7 @@
       },
       {
         "value": "[{\"display\":\"Follow Up\",\"locale\":\"en\"},{\"display\":\"Seguimiento\",\"locale\":\"es\"}]",
-        "dataType": "org.bahmni.customdatatype.datatype.FORM_NAMETranslationDatatype",
+        "dataType": "org.bahmni.customdatatype.datatype.formNameTranslationDatatype",
         "uuid": "ce3bba8a-83a3-4021-acc1-c7d3e6313348"
       }
     ]
@@ -26,7 +26,7 @@
         "RETURN_VISIT_DATE_1_DESC": "Patient is to return on this date",
         "RETURN_VISIT_DATE_1": "Return visit date"
       },
-      "FORM_NAME": "Follow Up",
+      "formName": "Follow Up",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -40,7 +40,7 @@
         "RETURN_VISIT_DATE_1_DESC": "El paciente debe regresar en esta fecha",
         "RETURN_VISIT_DATE_1": "Fecha de proxima visita"
       },
-      "FORM_NAME": "Seguimiento",
+      "formName": "Seguimiento",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

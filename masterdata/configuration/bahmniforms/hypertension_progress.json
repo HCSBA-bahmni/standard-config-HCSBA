@@ -28,7 +28,7 @@
         "LAST_SERUM_CREATININE_DATE_4": "Last serum creatinine date",
         "LOW-DENSITY_LIPOPROTEIN_CHOLESTEROL_(MMOL/L)_7_DESC": "Test for LDL cholesterol is used along with other lipid tests to determine risk of heart disease."
       },
-      "FORM_NAME": "Hypertension Progress",
+      "formName": "Hypertension Progress",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -49,7 +49,7 @@
         "LAST_SERUM_CREATININE_DATE_4": "Fecha de la última creatinina sérica",
         "LOW-DENSITY_LIPOPROTEIN_CHOLESTEROL_(MMOL/L)_7_DESC": "La prueba de colesterol LDL se usa junto con otras pruebas lipídicas para determinar el riesgo de enfermedad cardíaca."
       },
-      "FORM_NAME": "Progreso de hipertensión",
+      "formName": "Progreso de hipertensión",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

@@ -13,7 +13,7 @@
       },
       {
         "value": "[{\"display\":\"Orthopaedic Examination\",\"locale\":\"en\"},{\"display\":\"Examen ortopedico\",\"locale\":\"es\"}]",
-        "dataType": "org.bahmni.customdatatype.datatype.FORM_NAMETranslationDatatype",
+        "dataType": "org.bahmni.customdatatype.datatype.formNameTranslationDatatype",
         "uuid": "385a7393-2242-4e58-b6fd-2cff1806dd46"
       }
     ]
@@ -27,7 +27,7 @@
         "RADIOGRAPHIC_EXAMINATION_3": "Radiographic Examination",
         "RANGE_OF_MOTION_2": "Range of Motion"
       },
-      "FORM_NAME": "Orthopaedic Examination",
+      "formName": "Orthopaedic Examination",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -41,7 +41,7 @@
         "RADIOGRAPHIC_EXAMINATION_3": "Examen radiografico",
         "RANGE_OF_MOTION_2": "Rango de movimiento"
       },
-      "FORM_NAME": "Examen ortopedico",
+      "formName": "Examen ortopedico",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

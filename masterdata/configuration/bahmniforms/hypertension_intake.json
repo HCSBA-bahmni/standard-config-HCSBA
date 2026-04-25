@@ -12,7 +12,7 @@
       },
       {
         "value": "[{\"display\":\"Hypertension Intake\",\"locale\":\"en\"},{\"display\":\"Ingreso de hipertension\",\"locale\":\"es\"}]",
-        "dataType": "org.bahmni.customdatatype.datatype.FORM_NAMETranslationDatatype",
+        "dataType": "org.bahmni.customdatatype.datatype.formNameTranslationDatatype",
         "uuid": "7b6964dd-c657-437f-aa2d-bcca7b7f3529"
       }
     ]
@@ -67,7 +67,7 @@
         "CURRENTLY_10": "Currently",
         "MYOCARDIAL_INFARCTION_3": "Myocardial infarction"
       },
-      "FORM_NAME": "Hypertension Intake",
+      "formName": "Hypertension Intake",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -122,7 +122,7 @@
         "CURRENTLY_10": "Actualmente",
         "MYOCARDIAL_INFARCTION_3": "Infarto de miocardio"
       },
-      "FORM_NAME": "Ingreso de hipertensión",
+      "formName": "Ingreso de hipertensión",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

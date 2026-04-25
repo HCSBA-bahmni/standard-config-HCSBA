@@ -46,7 +46,7 @@
         "ARTERIAL_BLOOD_OXYGEN_SATURATION_(PULSE_OXIMETER)_15": "Arterial blood oxygen saturation (pulse oximeter)",
         "TEMPERATURE_17_DESC": "Patient's temperature in Fahrenheit"
       },
-      "FORM_NAME": "Vitals",
+      "formName": "Vitals",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -81,7 +81,7 @@
         "ARTERIAL_BLOOD_OXYGEN_SATURATION_(PULSE_OXIMETER)_15": "Saturacion arterial de oxigeno (oximetro de pulso)",
         "TEMPERATURE_17_DESC": "Temperatura del paciente en Fahrenheit"
       },
-      "FORM_NAME": "Signos vitales",
+      "formName": "Signos vitales",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

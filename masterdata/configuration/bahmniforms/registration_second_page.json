@@ -83,7 +83,7 @@
         "REGISTRATION_FEE_18": "Registration Fee",
         "PULSE_28": "Pulse"
       },
-      "FORM_NAME": "Registration Details",
+      "formName": "Registration Details",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -132,7 +132,7 @@
         "REGISTRATION_FEE_18": "Tarifa de registro",
         "PULSE_28": "Pulso"
       },
-      "FORM_NAME": "Detalles de registro",
+      "formName": "Detalles de registro",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,

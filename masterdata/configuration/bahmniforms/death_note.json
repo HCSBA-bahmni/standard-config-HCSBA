@@ -13,7 +13,7 @@
       },
       {
         "value": "[{\"display\":\"Death Note\",\"locale\":\"en\"},{\"display\":\"Nota de defuncion\",\"locale\":\"es\"}]",
-        "dataType": "org.bahmni.customdatatype.datatype.FORM_NAMETranslationDatatype",
+        "dataType": "org.bahmni.customdatatype.datatype.formNameTranslationDatatype",
         "uuid": "d7609e2a-f183-46d6-b3d1-ff484d47d891"
       }
     ]
@@ -38,7 +38,7 @@
         "YES_4": "Yes",
         "NATURAL_DEATH_2": "Natural Death"
       },
-      "FORM_NAME": "Death Note",
+      "formName": "Death Note",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
@@ -63,7 +63,7 @@
         "YES_4": "Si",
         "NATURAL_DEATH_2": "Muerte natural"
       },
-      "FORM_NAME": "Nota de defuncion",
+      "formName": "Nota de defuncion",
       "formUuid": null,
       "version": "1",
       "referenceVersion": null,
