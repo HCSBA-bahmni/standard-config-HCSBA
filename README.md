@@ -70,3 +70,12 @@ id conceptiod frequency per day
 23	92	1.0
 
 se agregan estos concoptos tambien respetando los uuid
+
+hay conceptos que se deben armonizar por que estan repetidos. algunos conceptos que viven solo en la DB  como los pertenecientes a order frecuency, poidrian ser dados de baja y se podrian incortporar propios de Ciel, ya que estan mapeados a snomed
+Nombre ES: Cada hora
+Nombre EN (FSN): Every hour
+Concept id OCL: 162244
+External id: 162244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+UUID de concepto en el JSON v6: 5719174
+UUID del nombre ES (ConceptName): 19137250
+ese es un ejemplo
