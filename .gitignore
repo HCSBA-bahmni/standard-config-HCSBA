@@ -7,4 +7,6 @@
 */.idea/*
 .tmp
 target
-
+search_results_hcsba.txt
+zip_search_results.txt
+compact_concepts_report.txt

@@ -1,0 +1,10 @@
+Uuid,Void/Retire,Same as mappings,Fully specified name:en,Short name:en,Description:en,Fully specified name:es,Short name:es,Description:es,Data class,Data type,Answers,Members,_version:1,_order:3000
+d46ee786-5e07-11ef-8f7c-0242ac120002,,,Dosing Instructions,Dosing Instructions,,Instrucciones de dosificacion,Instrucciones de dosificacion,,ConvSet,N/A,,,,
+d46f10ee-5e07-11ef-8f7c-0242ac120002,,,Before meals,ac,,Antes de las comidas,ac,,Misc,N/A,,,,
+d46f444a-5e07-11ef-8f7c-0242ac120002,,,Empty stomach,,,Estomago vacio,,,Misc,N/A,,,,
+d46f76c0-5e07-11ef-8f7c-0242ac120002,,,After meals,pc,,Despues de las comidas,pc,,Misc,N/A,,,,
+d46fa8e7-5e07-11ef-8f7c-0242ac120002,,,In the morning,cm,,En la manana,cm,,Misc,N/A,,,,
+d46fdadb-5e07-11ef-8f7c-0242ac120002,,,In the evening,,,En la noche,,,Misc,N/A,,,,
+d4700e81-5e07-11ef-8f7c-0242ac120002,,,At bedtime,hs,,A la hora de dormir,hs,,Misc,N/A,,,,
+d4704115-5e07-11ef-8f7c-0242ac120002,,,Immediately,STAT,,Inmediatamente,STAT,,Misc,N/A,,,,
+d4707435-5e07-11ef-8f7c-0242ac120002,,,As directed,,,Segun indicacion,,,Misc,N/A,,,,
