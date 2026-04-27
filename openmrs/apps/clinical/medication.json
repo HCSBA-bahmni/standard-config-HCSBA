@@ -53,13 +53,24 @@
           "Cream": {
             "route": "Topical"
           },
+          "Disintegrating tablet": {
+            "doseUnits": "Tablet",
+            "route": "Oral"
+          },
           "Drops": {
             "doseUnits": "Drop",
             "route": "Topical"
           },
+          "Enteric-coated tablet": {
+            "doseUnits": "Tablet",
+            "route": "Oral"
+          },
           "Food Supplement": {
             "doseUnits": "Unit",
             "route": "Oral"
+          },
+          "Gas": {
+            "route": "Inhalation"
           },
           "Gel": {
             "route": "Topical"
@@ -68,7 +79,15 @@
             "doseUnits": "Unit",
             "route": "Oral"
           },
+          "Inhalation": {
+            "doseUnits": "Puff",
+            "route": "Inhalation"
+          },
           "Inhaler": {
+            "doseUnits": "Puff",
+            "route": "Inhalation"
+          },
+          "Inhalation powder": {
             "doseUnits": "Puff",
             "route": "Inhalation"
           },
@@ -86,8 +105,20 @@
           "Lotion": {
             "route": "Topical"
           },
+          "Nasal solution": {
+            "doseUnits": "ml",
+            "route": "Nasal"
+          },
           "Ointment": {
             "route": "Topical"
+          },
+          "Oral capsule": {
+            "doseUnits": "Capsule",
+            "route": "Oral"
+          },
+          "Oral solution": {
+            "doseUnits": "ml",
+            "route": "Oral"
           },
           "Pessary": {
             "doseUnits": "Unit",
@@ -97,6 +128,14 @@
             "doseUnits": "mg",
             "route": "Topical"
           },
+          "Powder for injection": {
+            "doseUnits": "mg",
+            "route": "Intravenous"
+          },
+          "Powder suspension": {
+            "doseUnits": "ml",
+            "route": "Oral"
+          },
           "Solution": {
             "doseUnits": "ml",
             "route": "Topical"
@@ -104,6 +143,22 @@
           "Spray": {
             "doseUnits": "Puff",
             "route": "Nasal"
+          },
+          "Sublingual tablet": {
+            "doseUnits": "Tablet",
+            "route": "Sub Lingual"
+          },
+          "Suppository": {
+            "doseUnits": "Unit",
+            "route": "Per Rectum"
+          },
+          "Suspension": {
+            "doseUnits": "ml",
+            "route": "Oral"
+          },
+          "Sustained-release tablet": {
+            "doseUnits": "Tablet",
+            "route": "Oral"
           },
           "Syrup": {
             "doseUnits": "ml",
