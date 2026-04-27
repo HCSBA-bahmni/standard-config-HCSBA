@@ -1,4 +1,5 @@
 Uuid,Void/Retire,Mappings|SAME-AS,Fully specified name:en,Short name:en,Description:en,Fully specified name:es,Short name:es,Description:es,Data class,Data type,Answers,Members,_version:1,_order:3000
+d32a6beb-5e07-11ef-8f7c-0242ac120002,,,Lab Samples,Laboratory,,Muestras de laboratorio,Laboratorio,,ConvSet,N/A,,,,
 0166bbd5-8609-4c78-b830-53512a4cbbd3,,SNOMED-CT:119297000,Blood Specimen,Blood,,Muestra de sangre,Sangre,,Specimen,N/A,,,,
 1d372353-ff56-49d4-97dd-5274fd460156,,SNOMED-CT:119376003,Tissue Specimen,Tissue,,Muestra de tejido,Tejido,,Specimen,N/A,,,,
 43d31d4d-01a0-47b1-854f-545d57a0c78f,,SNOMED-CT:119325001,Skin Specimen,Skin,,Muestra de piel,Piel,,Specimen,N/A,,,,

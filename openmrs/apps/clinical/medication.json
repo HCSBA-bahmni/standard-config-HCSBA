@@ -9,7 +9,7 @@
       "inputOptionsConfig": {
         "defaultDurationUnit": "Días",
         "hideOrderSet" : false,
-        "defaultInstructions": "Según indicación",
+        "defaultInstructions": "Segun indicacion",
         "durationUnitsFactors": [
           {
             "name": "Días",
