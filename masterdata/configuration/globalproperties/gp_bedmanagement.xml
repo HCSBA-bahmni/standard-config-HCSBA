@@ -1,0 +1,9 @@
+<config>
+  <globalProperties>
+    <globalProperty>
+      <property>bedmanagement.owa.enableManagingLocations</property>
+      <value>true</value>
+      <description>Habilita la creación, edición y eliminación de ubicaciones y salas en Administración de Camas.</description>
+    </globalProperty>
+  </globalProperties>
+</config>
