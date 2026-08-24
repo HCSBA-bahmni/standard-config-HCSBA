@@ -11,6 +11,8 @@ const v2 = json("openmrs/apps/registration/v2/app.json");
 const sources = read("masterdata/configuration/idgen/identifierSource.csv");
 const attributes = read("masterdata/configuration/personattributetypes/personAttributeTypes.csv");
 const liquibase = read("masterdata/configuration/liquibase/liquibase.xml");
+const relationships = read("masterdata/configuration/relationshiptypes/relationshiptypes.csv");
+const addressConfiguration = read("masterdata/configuration/addresshierarchy/addressConfiguration.xml");
 
 assert.match(sources, /,Patient Identifier,RUT\*,[^\r\n]*,RUT\*,/, "La fuente histórica RUT* debe conservarse");
 assert.match(sources, /ed8eead4-146b-4548-84ea-cb897ff82d6e,[^\r\n]*,HCSBA,/, "Debe existir una fuente institucional HCSBA independiente");
@@ -45,6 +47,10 @@ assert.strictEqual(classic.config.addressHierarchy.showAddressFieldsTopDown, tru
 assert.strictEqual(classic.config.addressHierarchy.strictAutocompleteFromLevel, "cityVillage");
 assert.match(liquibase, /eis_patient_identifiers\.xml/);
 assert.match(liquibase, /eis_registration_contact_order\.xml/);
+assert.match(relationships, /Representante legal[^\r\n]*Representa legalmente a,Es representado legalmente por/);
+assert.match(relationships, /Contacto responsable[^\r\n]*Es contacto responsable de,Tiene como contacto responsable a/);
+assert.doesNotMatch(liquibase, /\$\{now\}/, "Liquibase 4.4 no debe recibir placeholders de fecha sin resolver");
+assert.strictEqual((addressConfiguration.match(/<addressComponent>/g) ?? []).length, 9);
 
 for (const relativePath of [
   "masterdata/configuration/concepts/eisDemographics.csv",

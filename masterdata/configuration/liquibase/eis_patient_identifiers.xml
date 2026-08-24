@@ -27,7 +27,7 @@
             <column name="uniqueness_behavior" value="UNIQUE"/>
             <column name="location_behavior" value="NOT_USED"/>
             <column name="creator" valueNumeric="1"/>
-            <column name="date_created" valueDate="${now}"/>
+            <column name="date_created" valueComputed="CURRENT_TIMESTAMP"/>
             <column name="retired" valueBoolean="false"/>
             <column name="uuid" value="0286b492-05b1-4bf3-a8ae-8c60dff87f41"/>
         </insert>
@@ -48,7 +48,7 @@
             <column name="uniqueness_behavior" value="UNIQUE"/>
             <column name="location_behavior" value="NOT_USED"/>
             <column name="creator" valueNumeric="1"/>
-            <column name="date_created" valueDate="${now}"/>
+            <column name="date_created" valueComputed="CURRENT_TIMESTAMP"/>
             <column name="retired" valueBoolean="false"/>
             <column name="uuid" value="5663f9bc-068b-4857-b098-02276b9de9b1"/>
         </insert>
@@ -67,7 +67,7 @@
             <column name="uniqueness_behavior" value="UNIQUE"/>
             <column name="location_behavior" value="NOT_USED"/>
             <column name="creator" valueNumeric="1"/>
-            <column name="date_created" valueDate="${now}"/>
+            <column name="date_created" valueComputed="CURRENT_TIMESTAMP"/>
             <column name="retired" valueBoolean="false"/>
             <column name="uuid" value="c4a9a5de-c35a-43e2-83f1-fc8fcd3b48c7"/>
         </insert>
@@ -86,7 +86,7 @@
             <column name="uniqueness_behavior" value="UNIQUE"/>
             <column name="location_behavior" value="NOT_USED"/>
             <column name="creator" valueNumeric="1"/>
-            <column name="date_created" valueDate="${now}"/>
+            <column name="date_created" valueComputed="CURRENT_TIMESTAMP"/>
             <column name="retired" valueBoolean="false"/>
             <column name="uuid" value="a20b6e2f-8cc7-4264-a868-899f59b0c866"/>
         </insert>
@@ -105,7 +105,7 @@
             <column name="uniqueness_behavior" value="UNIQUE"/>
             <column name="location_behavior" value="NOT_USED"/>
             <column name="creator" valueNumeric="1"/>
-            <column name="date_created" valueDate="${now}"/>
+            <column name="date_created" valueComputed="CURRENT_TIMESTAMP"/>
             <column name="retired" valueBoolean="false"/>
             <column name="uuid" value="823c4762-7d5a-4a8f-b651-5bd4a87a056e"/>
         </insert>
@@ -168,7 +168,7 @@
             <column name="description" value="RUN provisorio Artículo 44; código NID 2; temporal y no generado localmente."/>
             <column name="required" valueBoolean="false"/><column name="check_digit" valueBoolean="false"/>
             <column name="uniqueness_behavior" value="UNIQUE"/><column name="location_behavior" value="NOT_USED"/>
-            <column name="creator" valueNumeric="1"/><column name="date_created" valueDate="${now}"/><column name="retired" valueBoolean="false"/>
+            <column name="creator" valueNumeric="1"/><column name="date_created" valueComputed="CURRENT_TIMESTAMP"/><column name="retired" valueBoolean="false"/>
             <column name="uuid" value="8c6ab3a2-9ca2-49c7-a820-000000000002"/>
         </insert>
         <insert tableName="patient_identifier_type">
@@ -176,7 +176,7 @@
             <column name="description" value="Acta de nacimiento extranjera; código NID 7; requiere país emisor."/>
             <column name="required" valueBoolean="false"/><column name="check_digit" valueBoolean="false"/>
             <column name="uniqueness_behavior" value="NON_UNIQUE"/><column name="location_behavior" value="NOT_USED"/>
-            <column name="creator" valueNumeric="1"/><column name="date_created" valueDate="${now}"/><column name="retired" valueBoolean="false"/>
+            <column name="creator" valueNumeric="1"/><column name="date_created" valueComputed="CURRENT_TIMESTAMP"/><column name="retired" valueBoolean="false"/>
             <column name="uuid" value="8c6ab3a2-9ca2-49c7-a820-000000000007"/>
         </insert>
         <insert tableName="patient_identifier_type">
@@ -184,7 +184,7 @@
             <column name="description" value="Identificación Provisoria del Apoderado; código NID 10; temporal, emitida por MINEDUC."/>
             <column name="required" valueBoolean="false"/><column name="check_digit" valueBoolean="false"/>
             <column name="uniqueness_behavior" value="UNIQUE"/><column name="location_behavior" value="NOT_USED"/>
-            <column name="creator" valueNumeric="1"/><column name="date_created" valueDate="${now}"/><column name="retired" valueBoolean="false"/>
+            <column name="creator" valueNumeric="1"/><column name="date_created" valueComputed="CURRENT_TIMESTAMP"/><column name="retired" valueBoolean="false"/>
             <column name="uuid" value="8c6ab3a2-9ca2-49c7-a820-000000000010"/>
         </insert>
         <insert tableName="patient_identifier_type">
@@ -192,7 +192,7 @@
             <column name="description" value="Identificación Provisoria del Escolar; código NID 11; temporal, emitida por MINEDUC."/>
             <column name="required" valueBoolean="false"/><column name="check_digit" valueBoolean="false"/>
             <column name="uniqueness_behavior" value="UNIQUE"/><column name="location_behavior" value="NOT_USED"/>
-            <column name="creator" valueNumeric="1"/><column name="date_created" valueDate="${now}"/><column name="retired" valueBoolean="false"/>
+            <column name="creator" valueNumeric="1"/><column name="date_created" valueComputed="CURRENT_TIMESTAMP"/><column name="retired" valueBoolean="false"/>
             <column name="uuid" value="8c6ab3a2-9ca2-49c7-a820-000000000011"/>
         </insert>
         <insert tableName="patient_identifier_type">
@@ -200,7 +200,7 @@
             <column name="description" value="Número de ficha clínica de otro sistema local; código NID 12; el establecimiento emisor integra el namespace."/>
             <column name="required" valueBoolean="false"/><column name="check_digit" valueBoolean="false"/>
             <column name="uniqueness_behavior" value="NON_UNIQUE"/><column name="location_behavior" value="NOT_USED"/>
-            <column name="creator" valueNumeric="1"/><column name="date_created" valueDate="${now}"/><column name="retired" valueBoolean="false"/>
+            <column name="creator" valueNumeric="1"/><column name="date_created" valueComputed="CURRENT_TIMESTAMP"/><column name="retired" valueBoolean="false"/>
             <column name="uuid" value="8c6ab3a2-9ca2-49c7-a820-000000000012"/>
         </insert>
         <insert tableName="patient_identifier_type">
@@ -208,7 +208,7 @@
             <column name="description" value="Otro tipo de identificador; código NID 14; exige tipo, emisor y namespace explícitos."/>
             <column name="required" valueBoolean="false"/><column name="check_digit" valueBoolean="false"/>
             <column name="uniqueness_behavior" value="NON_UNIQUE"/><column name="location_behavior" value="NOT_USED"/>
-            <column name="creator" valueNumeric="1"/><column name="date_created" valueDate="${now}"/><column name="retired" valueBoolean="false"/>
+            <column name="creator" valueNumeric="1"/><column name="date_created" valueComputed="CURRENT_TIMESTAMP"/><column name="retired" valueBoolean="false"/>
             <column name="uuid" value="8c6ab3a2-9ca2-49c7-a820-000000000014"/>
         </insert>
     </changeSet>
