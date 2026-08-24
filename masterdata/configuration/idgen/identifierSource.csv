@@ -1,2 +1,3 @@
 Uuid,Void/Retire,Identifier type,Name,Description,Prefix,Suffix,First identifier base,Min length,Max length,Base character set,_version:1
 c5cf4b68-6529-43fc-a644-c775ae73745e,,Patient Identifier,RUT*,ID sequence source for patients in RUT*,RUT*,,200000,4,,0123456789K,
+ed8eead4-146b-4548-84ea-cb897ff82d6e,,Patient Identifier,Identificador clínico HCSBA,Fuente institucional para identificadores clínicos internos HCSBA,HCSBA,,100000,6,12,0123456789,

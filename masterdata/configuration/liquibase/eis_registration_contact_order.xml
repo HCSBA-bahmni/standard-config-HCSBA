@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!--
+      Initializer's personattributetypes CSV domain does not expose sort_weight.
+      These native OpenMRS metadata updates are scoped by stable attribute UUID/name.
+      Bahmni classic consumes this order when it builds two-column rows.
+    -->
+    <changeSet id="eis-registration-contact-order-20260721" author="EIS">
+        <!--
+          On a clean installation Initializer runs Liquibase before it imports
+          personattributetypes/*.csv. CONTINUE leaves this changeset pending so
+          it can be applied on the next OpenMRS start, after those CSV rows exist.
+        -->
+        <preConditions onFail="CONTINUE">
+            <tableExists tableName="person_attribute_type"/>
+            <columnExists tableName="person_attribute_type" columnName="sort_weight"/>
+            <sqlCheck expectedResult="8">
+                SELECT COUNT(*) FROM person_attribute_type
+                WHERE name IN ('phoneNumber','fixedPhoneNumber','alternatePhoneNumber','otherPhoneType','email','preferredContactChannel','contactRestrictions','requiresThirdPartySupport')
+            </sqlCheck>
+        </preConditions>
+        <comment>Order EIS contact fields and local operational contact preferences in Bahmni registration</comment>
+        <update tableName="person_attribute_type"><column name="sort_weight" valueNumeric="20"/><where>name = 'phoneNumber'</where></update>
+        <update tableName="person_attribute_type"><column name="sort_weight" valueNumeric="21"/><where>uuid = '5a754f06-05d8-42f8-a820-000000000008'</where></update>
+        <update tableName="person_attribute_type"><column name="sort_weight" valueNumeric="22"/><where>name = 'alternatePhoneNumber'</where></update>
+        <update tableName="person_attribute_type"><column name="sort_weight" valueNumeric="23"/><where>uuid = '5a754f06-05d8-42f8-a820-000000000007'</where></update>
+        <update tableName="person_attribute_type"><column name="sort_weight" valueNumeric="24"/><where>name = 'email'</where></update>
+        <update tableName="person_attribute_type"><column name="sort_weight" valueNumeric="30"/><where>uuid = '2aae4fca-e10f-4fa6-83d1-710ea1839ff9'</where></update>
+        <update tableName="person_attribute_type"><column name="sort_weight" valueNumeric="31"/><where>uuid = '9f180837-c757-47d8-a862-e181c29e276c'</where></update>
+        <update tableName="person_attribute_type"><column name="sort_weight" valueNumeric="32"/><where>uuid = 'e9db993b-c17f-4088-bf18-02f8e55fec23'</where></update>
+    </changeSet>
+</databaseChangeLog>

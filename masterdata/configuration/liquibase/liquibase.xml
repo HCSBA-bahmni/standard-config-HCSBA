@@ -353,4 +353,7 @@
         </sql>
 
     </changeSet>
+    <!-- EIS Chile: instalar el OMOD eisidentity antes de activar el validador RUN. -->
+    <include file="eis_patient_identifiers.xml" relativeToChangelogFile="true"/>
+    <include file="eis_registration_contact_order.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
