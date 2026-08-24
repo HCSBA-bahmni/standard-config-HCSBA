@@ -7,7 +7,7 @@
 | Configuración HealthMesh | `standard-config-chile`, tag `2026.08.2` | `004884e` |
 | Comportamiento legacy | `openmrs-module-bahmniapps-chile`, tag `2026.08.2` | `54bbc13` |
 | Módulo de identidad base | `openmrs-module-eis-identity`, tag `v0.1.0` | `81bcbf4` |
-| Variante HCSBA | rama `hcsba/eis-registration` | `688399f` (sobre `v0.1.0`) |
+| Variante HCSBA | rama `hcsba/eis-registration` | `c092b6d` (sobre `v0.1.0`) |
 
 No actualizar desde ramas móviles sin repetir el inventario de UUID, contratos y
 pruebas. La configuración portada conserva los UUID públicos de los metadatos
