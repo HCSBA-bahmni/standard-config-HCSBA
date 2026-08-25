@@ -47,6 +47,27 @@ las referencias de pacientes; una instalación limpia usa el UUID EIS.
 7. Probar creación, edición y búsqueda con RUN, pasaporte, folio de parto,
    documento extranjero y paciente sin RUN antes de habilitar el corte Next.js.
 
+## Particularidades del despliegue compartido HCSBA
+
+- No se debe inferir el MySQL activo desde el puerto `3306` del host de
+  OpenMRS. En el despliegue verificado el 2026-08-25, OpenMRS en `.205` usa el
+  JDBC declarado en `/openmrs/data/openmrs-runtime.properties`, cuyo servidor
+  es `.222`. Preflight, respaldo, `db/apply.sh` y postflight deben apuntar al
+  host obtenido de esa propiedad y al mismo esquema `openmrs`.
+- La configuración efectiva persiste en `/openmrs/data/configuration`. Montar
+  una imagen nueva en `/etc/bahmni_config` no reemplaza automáticamente los
+  archivos ya persistidos. En una promoción incremental se copian sólo los
+  dominios EIS aprobados a la ruta activa y se conserva un tar previo de ella.
+- Los checksums no sustituyen la validación de base de datos: Initializer puede
+  escribirlos aunque un cargador no haya consolidado sus cambios. Después de
+  cada importación se comprueban los metadatos tanto por SQL en el JDBC activo
+  como por REST. Sólo ante una reejecución diagnosticada se eliminan los
+  checksums exactos de los archivos EIS; nunca se vacía el directorio completo.
+- El resultado esperado de esta versión es: 12 tipos de identificador clínico
+  o normativo, 15 atributos de persona/contacto, 276 conceptos mapeados a
+  `EIS-820`, 422 entradas territoriales y los dos orígenes IDGen históricos e
+  institucionales asociados a `Patient Identifier`.
+
 ## Reversa
 
 - Desactivar primero el validador del tipo RUN y retirar la configuración EIS.
