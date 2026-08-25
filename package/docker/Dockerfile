@@ -5,5 +5,5 @@ COPY masterdata /etc/bahmni_config/masterdata
 COPY openelis /etc/bahmni_config/openelis
 
 COPY package/docker/start.sh start.sh
-RUN chmod +x start.sh
+RUN sed -i 's/\r$//' start.sh && chmod +x start.sh
 CMD ["./start.sh"]
