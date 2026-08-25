@@ -10,6 +10,12 @@ const identifiers = fs.readFileSync(
     "utf8"
 );
 
+assert.match(
+    identifiers,
+    /eis-normalize-historical-primary-identifier-20260825[\s\S]*?pit\.name = 'RUN\*'[\s\S]*?src\.uuid = 'c5cf4b68-6529-43fc-a644-c775ae73745e'[\s\S]*?<column name="name" value="Patient Identifier"\/>/,
+    "La promoción debe reclasificar el RUN* histórico como identificador clínico sin cambiar su UUID ni su fuente IDGen"
+);
+
 const validatorClass = "org.openmrs.module.eisidentity.validation.RunIdentifierValidator";
 
 assert.match(

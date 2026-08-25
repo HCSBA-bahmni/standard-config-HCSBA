@@ -9,6 +9,22 @@
       Estos tipos son adicionales y ninguno es obligatorio para crear un paciente.
       RUN usa una representación canónica sin puntos: 12345678-5.
     -->
+    <changeSet id="eis-normalize-historical-primary-identifier-20260825" author="HCSBA">
+        <preConditions onFail="MARK_RAN">
+            <and>
+                <tableExists tableName="idgen_identifier_source"/>
+                <sqlCheck expectedResult="0">SELECT COUNT(*) FROM patient_identifier_type WHERE name = 'Patient Identifier' AND retired = 0</sqlCheck>
+                <sqlCheck expectedResult="1">SELECT COUNT(*) FROM patient_identifier_type pit JOIN idgen_identifier_source src ON src.identifier_type = pit.patient_identifier_type_id WHERE pit.name = 'RUN*' AND pit.retired = 0 AND src.uuid = 'c5cf4b68-6529-43fc-a644-c775ae73745e' AND src.retired = 0</sqlCheck>
+            </and>
+        </preConditions>
+        <comment>Conserva UUID, pacientes y secuencia del antiguo RUN* de HCSBA, aclarándolo como identificador clínico interno antes de crear el RUN normativo EIS</comment>
+        <update tableName="patient_identifier_type">
+            <column name="name" value="Patient Identifier"/>
+            <column name="description" value="Identificador clínico interno autogenerado por Bahmni; no corresponde al RUN normativo chileno."/>
+            <where>patient_identifier_type_id = (SELECT identifier_type FROM idgen_identifier_source WHERE uuid = 'c5cf4b68-6529-43fc-a644-c775ae73745e' AND retired = 0 LIMIT 1)</where>
+        </update>
+    </changeSet>
+
     <changeSet id="eis-patient-identifier-run-20260718" author="EIS">
         <preConditions onFail="HALT">
             <tableExists tableName="patient_identifier_type"/>
