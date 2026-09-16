@@ -1,133 +1,393 @@
 {
-        "id": "bahmni.registration",
-        "instanceOf":"bahmni.template.registration",
-        "description": "Bahmni Patient Registration App",
-        "extensionPoints": [
-            {
-                "id": "org.bahmni.registration.patient.search.result.action",
-                "description": "Bahmni Patient Search Result Action"
-            },
-            {
-                "id": "org.bahmni.registration.patient.next",
-                "description": "After Bahmni Patient Registration, forward url configuration"
-            },
-            {
-                "id": "org.bahmni.registration.navigation",
-                "description": "Navigation within regsitration first and second page"
-            },
-            {
-                "id": "org.bahmni.registration.conceptSetGroup.observations",
-                "description": "Registration Second Page Forms"
-            }
+  "id": "bahmni.registration",
+  "instanceOf": "bahmni.template.registration",
+  "description": "Bahmni Patient Registration App",
+  "extensionPoints": [
+    {
+      "id": "org.bahmni.registration.patient.search.result.action",
+      "description": "Bahmni Patient Search Result Action"
+    },
+    {
+      "id": "org.bahmni.registration.patient.next",
+      "description": "After Bahmni Patient Registration, forward url configuration"
+    },
+    {
+      "id": "org.bahmni.registration.navigation",
+      "description": "Navigation within regsitration first and second page"
+    },
+    {
+      "id": "org.bahmni.registration.conceptSetGroup.observations",
+      "description": "Registration Second Page Forms"
+    }
+  ],
+  "contextModel": [
+    "patientUuid",
+    "activeVisitUuid"
+  ],
+  "config": {
+    "patientInformation": {
+      "personalIdentity": {
+        "title": "Identidad personal",
+        "translationKey": "REGISTRATION_PERSONAL_IDENTITY",
+        "expanded": true,
+        "order": 1,
+        "attributes": [
+          "socialName",
+          "biologicalSex",
+          "genderIdentity"
+        ]
+      },
+      "originAndNationality": {
+        "title": "Origen y nacionalidad",
+        "translationKey": "REGISTRATION_ORIGIN_AND_NATIONALITY",
+        "expanded": true,
+        "order": 2,
+        "attributes": [
+          "nationality",
+          "countryOfOrigin"
+        ]
+      },
+      "healthCoverage": {
+        "title": "Previsión de salud",
+        "translationKey": "REGISTRATION_HEALTH_COVERAGE",
+        "expanded": true,
+        "order": 3,
+        "attributes": [
+          "basicHealthInsurance"
+        ]
+      },
+      "isapreInstitution": {
+        "title": "Institución aseguradora",
+        "translationKey": "REGISTRATION_HEALTH_INSURER_SECTION",
+        "expanded": true,
+        "order": 4,
+        "attributes": [
+          "healthInsurer"
+        ]
+      },
+      "eisContactInformation": {
+        "title": "Datos de contacto",
+        "translationKey": "REGISTRATION_EIS_CONTACT",
+        "expanded": true,
+        "order": 5,
+        "attributes": [
+          "phoneNumber",
+          "fixedPhoneNumber",
+          "alternatePhoneNumber",
+          "otherPhoneType",
+          "email"
+        ]
+      },
+      "operationalContactPreferences": {
+        "title": "Preferencias operativas de contacto",
+        "translationKey": "REGISTRATION_OPERATIONAL_CONTACT_PREFERENCES",
+        "expanded": true,
+        "order": 6,
+        "attributes": [
+          "preferredContactChannel",
+          "contactRestrictions",
+          "requiresThirdPartySupport"
+        ]
+      },
+      "additionalPatientInformation": {
+        "title": "Additional Patient Information",
+        "attributes": [
+          "distanceFromCenter",
+          "isUrban",
+          "cluster",
+          "RationCard",
+          "familyIncome",
+          "debt"
         ],
-        "contextModel": [
-            "patientUuid",
-            "activeVisitUuid"
-        ],
-        "config" : {
-            "patientInformation": {
-                "additionalPatientInformation": {
-                    "title": "Additional Patient Information",
-                    "attributes": [
-                        "distanceFromCenter",
-                        "isUrban",
-                        "cluster",
-                        "RationCard",
-                        "familyIncome",
-                        "debt",
-                        "cluster",
-                        "email"
-                    ]
-                },
-                "hidden": {
-                    "attributes": [
-                        "primaryContact"
-                    ]
-                },
-                "defaults":  {
-                    "class": "General",
-                    "landHolding": 2
-                }
-            },
-            "hideFormName": true,
-            "addressHierarchy": {
-                "showAddressFieldsTopDown": false,
-                "strictAutocompleteFromLevel": "stateProvince"
-            },
-            "relationshipTypeMap": {
-                "Doctor":"provider",
-                "Parent":"patient"
-            },
-
-            "autoCompleteFields":["familyName", "caste"],
-            "defaultIdentifierPrefix": "RUN*",
-            "defaultVisitType": "OPD",
-            "searchByIdForwardUrl": "/patient/{{patientUuid}}",
-            "showMiddleName": true,
-            "showLastName": true,
-            "isLastNameMandatory": true,
-            "patientNameDisplayOrder": ["firstName", "middleName", "lastName"],
-            "showSaveConfirmDialog": false,
-            "showBirthTime": true,
-            "showCasteSameAsLastNameCheckbox": false,
-            "printOptions": [
-                {
-                    "translationKey": "REGISTRATION_PRINT_REG_CARD_LOCAL_KEY",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_local.html",
-                    "shortcutKey": "l"
-                },
-                {
-                    "translationKey": "REGISTRATION_PRINT_REG_CARD_KEY",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print.html",
-                    "shortcutKey": "p"
-                },
-                {
-                    "translationKey": "REGISTRATION_PRINT_SUPPLEMENTAL_PAPER",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/supplementalPaperLayout/print.html",
-                    "shortcutKey": "r"
-                },
-                {
-                    "translationKey": "REGISTRATION_PRINT_WITH_BARCODE",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/printWithBarcode.html",
-                    "shortcutKey": "c"
-                }
-            ],
-            "conceptSetUI": {
-                "REGISTRATION FEES": {
-                    "required": true,
-                    "label": "Fee"
-                },
-                "FHS": {
-                    "buttonSelect": true
-                },
-                "defaults":{
-                    "FHS": "Present"
-                }
-            },
-            "fieldValidation" : {
-                    "email" : {"pattern" : "^(?=.{1,40}$)(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,4})$", "errorMessage" : "Should be a valid email address"},
-                    "familyName" : {"pattern" : "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ'\\s]+$", "errorMessage" : "The last name should contain only alphabets, apostrophes and can include spaces."},
-                    "givenName" : {"pattern" : "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ'\\s]+$", "errorMessage" : "The first name should contain only alphabets, apostrophes and can include spaces."},
-                    "middleName" : {"pattern" : "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ'\\s]*$", "errorMessage" : "The middle name should contain only alphabets, apostrophes and can include spaces."},
-                    "address1":{"pattern":"^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ\\s'\\-\\/]{1,}", "errorMessage":"Only Alphanumerics and following special characters are allowed. Special characters - [ '-/]"},
-                    "address2":{"pattern":"^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ\\s,'\\-.\\/]{1,}", "errorMessage":"Only Alphanumerics and following special characters are allowed. Special characters - [ ,'-./]"},
-                    "cityVillage":{"pattern":"^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s,'\\-.\\/]{2,}", "errorMessage":"Only Alphanumerics and following special characters are allowed. Special characters - [ ,'-./]"}
-            },
-            "patientSearch": {
-                "customAttributes": {
-                    "label": "Phone Number",
-                    "placeholder": "Phone Number",
-                    "fields": ["phoneNumber","alternatePhoneNumber"]
-                },
-                "socialAttributes": {
-                    "label": "Nombre Social",
-                    "placeholder": "Nombre Social",
-                    "fields": ["givenNameLocal", "middleNameLocal", "familyNameLocal"]
-                }
-            },
-            "addressHierarchy": {
-                "showAddressFieldsTopDown": false,
-                "strictAutocompleteFromLevel": "postalCode"
-            }
-        }
+        "expanded": true,
+        "order": 7
+      },
+      "hidden": {
+        "attributes": [
+          "primaryContact"
+        ]
+      },
+      "defaults": {
+        "class": "General",
+        "landHolding": 2
+      }
+    },
+    "hideFormName": true,
+    "addressHierarchy": {
+      "showAddressFieldsTopDown": true,
+      "strictAutocompleteFromLevel": "cityVillage"
+    },
+    "relationshipTypeMap": {
+      "Doctor": "provider",
+      "Parent": "patient"
+    },
+    "autoCompleteFields": [
+      "familyName",
+      "caste"
+    ],
+    "defaultIdentifierPrefix": "HCSBA",
+    "defaultVisitType": "OPD",
+    "searchByIdForwardUrl": "/patient/{{patientUuid}}",
+    "showMiddleName": true,
+    "showLastName": true,
+    "isLastNameMandatory": true,
+    "patientNameDisplayOrder": [
+      "firstName",
+      "middleName",
+      "lastName",
+      "secondLastName"
+    ],
+    "showSaveConfirmDialog": false,
+    "showBirthTime": true,
+    "showCasteSameAsLastNameCheckbox": false,
+    "printOptions": [
+      {
+        "translationKey": "REGISTRATION_PRINT_REG_CARD_LOCAL_KEY",
+        "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_local.html",
+        "shortcutKey": "l"
+      },
+      {
+        "translationKey": "REGISTRATION_PRINT_REG_CARD_KEY",
+        "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print.html",
+        "shortcutKey": "p"
+      },
+      {
+        "translationKey": "REGISTRATION_PRINT_SUPPLEMENTAL_PAPER",
+        "templateUrl": "/bahmni_config/openmrs/apps/registration/supplementalPaperLayout/print.html",
+        "shortcutKey": "r"
+      },
+      {
+        "translationKey": "REGISTRATION_PRINT_WITH_BARCODE",
+        "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/printWithBarcode.html",
+        "shortcutKey": "c"
+      }
+    ],
+    "conceptSetUI": {
+      "REGISTRATION FEES": {
+        "required": true,
+        "label": "Fee"
+      },
+      "FHS": {
+        "buttonSelect": true
+      },
+      "defaults": {
+        "FHS": "Present"
+      }
+    },
+    "fieldValidation": {
+      "email": {
+        "pattern": "^(?=.{1,254}$)(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,63})$",
+        "errorMessage": "Ingrese un correo electrónico válido."
+      },
+      "familyName": {
+        "pattern": "^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ' \\-]*$",
+        "errorMessage": "Use letras, espacios, apóstrofos o guiones."
+      },
+      "givenName": {
+        "pattern": "^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ' \\-]*$",
+        "errorMessage": "Use letras, espacios, apóstrofos o guiones."
+      },
+      "middleName": {
+        "pattern": "^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ' \\-]*$",
+        "errorMessage": "Use letras, espacios, apóstrofos o guiones."
+      },
+      "address1": {
+        "pattern": "^[a-zA-Z0-9ÁÉÍÓÚÜÑáéíóúüñ\\s'\\-\\/]{1,}",
+        "errorMessage": "Use letras, números, espacios, apóstrofos, guiones o barras."
+      },
+      "address2": {
+        "pattern": "^[a-zA-Z0-9ÁÉÍÓÚÜÑáéíóúüñ\\s,'\\-.\\/]{1,}",
+        "errorMessage": "Use letras, números, espacios, comas, apóstrofos, guiones, puntos o barras."
+      },
+      "cityVillage": {
+        "pattern": "^[a-zA-Z0-9ÁÉÍÓÚÜÑáéíóúüñ\\s,'\\-.\\/]{2,}",
+        "errorMessage": "Use letras, números, espacios, comas, apóstrofos, guiones, puntos o barras."
+      },
+      "RUN": {
+        "pattern": "^\\d{1,8}-[0-9Kk]$",
+        "errorMessage": "Ingrese un RUN válido; puede escribirlo con o sin puntos."
+      },
+      "phoneNumber": {
+        "pattern": "^9[0-9]{8}$",
+        "errorMessage": "Ingrese 9 dígitos; el teléfono móvil debe comenzar con 9."
+      },
+      "fixedPhoneNumber": {
+        "pattern": "^[2-6][0-9]{8}$",
+        "errorMessage": "Ingrese 9 dígitos; el teléfono fijo debe comenzar entre 2 y 6."
+      },
+      "alternatePhoneNumber": {
+        "pattern": "^(?:9|[2-6])[0-9]{8}$",
+        "errorMessage": "Ingrese 9 dígitos de un teléfono móvil o fijo nacional."
+      },
+      "familyName2": {
+        "pattern": "^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ' \\-]*$",
+        "errorMessage": "Use letras, espacios, apóstrofos o guiones."
+      }
+    },
+    "patientSearch": {
+      "customAttributes": {
+        "label": "Número de teléfono",
+        "placeholder": "Ingrese número de teléfono",
+        "fields": [
+          "phoneNumber",
+          "alternatePhoneNumber"
+        ]
+      },
+      "socialAttributes": {
+        "label": "Nombre Social",
+        "placeholder": "Nombre Social",
+        "fields": [
+          "givenNameLocal",
+          "middleNameLocal",
+          "familyNameLocal"
+        ]
+      }
+    },
+    "showEnterID": false,
+    "prominentExtraIdentifierTypes": [
+      "RUN"
+    ],
+    "onDemandExtraIdentifierTypes": [
+      "RUN Provisorio",
+      "Folio comprobante de parto",
+      "Pasaporte",
+      "Documento país de origen",
+      "Acta de nacimiento país de origen",
+      "Identificador provisorio FONASA",
+      "IPA",
+      "IPE",
+      "Otro identificador"
+    ],
+    "hiddenExtraIdentifierTypes": [
+      "Ficha clínica local"
+    ],
+    "repeatableExtraIdentifierTypes": [
+      "Pasaporte",
+      "Documento país de origen",
+      "Acta de nacimiento país de origen",
+      "Otro identificador"
+    ],
+    "identifierMetadata": {
+      "RUN": {
+        "typeCode": "1",
+        "use": "official",
+        "issuerCountryCode": "152"
+      },
+      "RUN Provisorio": {
+        "typeCode": "BAH-RP",
+        "use": "temp",
+        "issuerCountryCode": "152",
+        "issuer": true,
+        "period": true
+      },
+      "Folio comprobante de parto": {
+        "typeCode": "3",
+        "use": "temp",
+        "issuerCountryCode": "152",
+        "issuer": true
+      },
+      "Pasaporte": {
+        "typeCode": "4",
+        "use": "official",
+        "country": true,
+        "countryRequired": true,
+        "issuer": true,
+        "period": true
+      },
+      "Documento país de origen": {
+        "typeCode": "5",
+        "use": "official",
+        "country": true,
+        "countryRequired": true,
+        "issuer": true,
+        "period": true
+      },
+      "Acta de nacimiento país de origen": {
+        "typeCode": "BAH-AN",
+        "use": "official",
+        "country": true,
+        "countryRequired": true,
+        "issuer": true
+      },
+      "Identificador provisorio FONASA": {
+        "typeCode": "6",
+        "use": "temp",
+        "issuerCountryCode": "152",
+        "issuer": true,
+        "period": true
+      },
+      "IPA": {
+        "typeCode": "BAH-IPA",
+        "use": "temp",
+        "issuerCountryCode": "152",
+        "issuer": true,
+        "period": true
+      },
+      "IPE": {
+        "typeCode": "BAH-IPE",
+        "use": "temp",
+        "issuerCountryCode": "152",
+        "issuer": true,
+        "period": true
+      },
+      "Ficha clínica local": {
+        "typeCode": "BAH-FCL",
+        "use": "secondary",
+        "issuerCountryCode": "152",
+        "issuer": true,
+        "issuerRequired": true,
+        "period": true
+      },
+      "Otro identificador": {
+        "typeCode": "BAH-OTR",
+        "use": "secondary",
+        "country": true,
+        "countryRequired": true,
+        "documentType": true,
+        "documentTypeRequired": true,
+        "issuer": true,
+        "issuerRequired": true,
+        "period": true
+      }
+    },
+    "fieldHelpText": {
+      "socialName": "REGISTRATION_HELP_SOCIAL_NAME",
+      "biologicalSex": "REGISTRATION_HELP_BIOLOGICAL_SEX",
+      "genderIdentity": "REGISTRATION_HELP_GENDER_IDENTITY",
+      "nationality": "REGISTRATION_HELP_NATIONALITY",
+      "countryOfOrigin": "REGISTRATION_HELP_COUNTRY_OF_ORIGIN",
+      "basicHealthInsurance": "REGISTRATION_HELP_BASIC_HEALTH_INSURANCE",
+      "healthInsurer": "REGISTRATION_HELP_HEALTH_INSURER",
+      "phoneNumber": "REGISTRATION_HELP_MOBILE_PHONE",
+      "fixedPhoneNumber": "REGISTRATION_HELP_FIXED_PHONE",
+      "alternatePhoneNumber": "REGISTRATION_HELP_OTHER_PHONE",
+      "otherPhoneType": "REGISTRATION_HELP_OTHER_PHONE_TYPE",
+      "email": "REGISTRATION_HELP_EMAIL",
+      "preferredContactChannel": "REGISTRATION_HELP_PREFERRED_CONTACT_CHANNEL",
+      "contactRestrictions": "REGISTRATION_HELP_CONTACT_RESTRICTIONS",
+      "requiresThirdPartySupport": "REGISTRATION_HELP_THIRD_PARTY_SUPPORT"
+    },
+    "identifierHelpText": {
+      "RUN": "REGISTRATION_HELP_IDENTIFIER_RUN",
+      "RUN Provisorio": "REGISTRATION_HELP_IDENTIFIER_RUN_PROVISIONAL",
+      "Folio comprobante de parto": "REGISTRATION_HELP_IDENTIFIER_BIRTH_FOLIO",
+      "Pasaporte": "REGISTRATION_HELP_IDENTIFIER_PASSPORT",
+      "Documento país de origen": "REGISTRATION_HELP_IDENTIFIER_ORIGIN_DOCUMENT",
+      "Acta de nacimiento país de origen": "REGISTRATION_HELP_IDENTIFIER_BIRTH_CERTIFICATE",
+      "Identificador provisorio FONASA": "REGISTRATION_HELP_IDENTIFIER_FONASA",
+      "IPA": "REGISTRATION_HELP_IDENTIFIER_IPA",
+      "IPE": "REGISTRATION_HELP_IDENTIFIER_IPE",
+      "Ficha clínica local": "REGISTRATION_HELP_IDENTIFIER_LOCAL_CHART",
+      "Otro identificador": "REGISTRATION_HELP_IDENTIFIER_OTHER"
+    },
+    "showSecondLastName": true,
+    "isSecondLastNameMandatory": false,
+    "mandatoryPersonAttributes": [
+      "biologicalSex",
+      "genderIdentity",
+      "nationality",
+      "countryOfOrigin",
+      "basicHealthInsurance"
+    ]
+  }
 }

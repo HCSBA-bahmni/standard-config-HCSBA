@@ -2,3 +2,4 @@ UUID,Void/Retire,Name,Description,HL7 Code,Unique ID
 ,,LOINC,LOINC Code Mappings,LN,
 ,,SNOMED-CT,SNOMED-CT Code Mappings,SCT,
 ,,PACS Procedure Code,PACS Procedure Code for mapping to PACS modalities,PACS Procedure Code,
+8a62dfe1-3248-4cf0-a820-000000000820,,EIS-820,Vocabularios de la Norma EIS 820 de datos de la persona,EIS820,https://deis.minsal.cl/

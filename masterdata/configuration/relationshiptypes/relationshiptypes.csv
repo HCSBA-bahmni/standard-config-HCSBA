@@ -1,2 +1,4 @@
 Uuid,Void/Retire,Name,Description,Weight,Preferred,A is to b,B is to a
-2a5f4ff4-a179-4b8a-aa4c-40f71956ebbc,true,,,,,,
+0f16ca5d-9a00-4db7-a19b-b99f26e37677,,Representante legal,Relación de representación legal cuya vigencia alcance y fundamento deben documentarse,1,,Representa legalmente a,Es representado legalmente por
+f5c9836f-5acf-41e9-97a2-26aa505abcda,,Contacto responsable,Persona priorizada para contacto asistencial o administrativo autorizado,2,,Es contacto responsable de,Tiene como contacto responsable a
+2a5f4ff4-a179-4b8a-aa4c-40f71956ebbc,true,Doctor/Patient,Relación clínica legacy retirada,3,,Doctor,Patient

@@ -1,0 +1,10 @@
+<config>
+  <globalProperties>
+    <!-- Incluye familyName2 en PersonName.getFullName() sin alterar el locale clínico existente. -->
+    <globalProperty>
+      <property>layout.name.format</property>
+      <value>latinamerica</value>
+      <description>Plantilla chilena de nombre: nombres, primer apellido y segundo apellido.</description>
+    </globalProperty>
+  </globalProperties>
+</config>
