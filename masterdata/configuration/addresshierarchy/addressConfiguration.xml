@@ -1,59 +1,40 @@
 <addressConfiguration>
   <wipe>true</wipe>
   <addressComponents>
-    <addressComponent>
+      <addressComponent>
       <field>COUNTRY</field>
       <nameMapping>País</nameMapping>
       <sizeMapping>40</sizeMapping>
-      <elementDefault>Chile</elementDefault>
-      <requiredInHierarchy>true</requiredInHierarchy>
+      <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
     <addressComponent>
       <field>STATE_PROVINCE</field>
       <nameMapping>Región</nameMapping>
       <sizeMapping>40</sizeMapping>
-      <requiredInHierarchy>true</requiredInHierarchy>
+      <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
     <addressComponent>
       <field>COUNTY_DISTRICT</field>
       <nameMapping>Provincia</nameMapping>
       <sizeMapping>40</sizeMapping>
-      <requiredInHierarchy>true</requiredInHierarchy>
-    </addressComponent>
-    <addressComponent>
-      <field>CITY_VILLAGE</field>
-      <nameMapping>Comuna</nameMapping>
-      <sizeMapping>40</sizeMapping>
-      <requiredInHierarchy>true</requiredInHierarchy>
-    </addressComponent>
-    <addressComponent>
-      <field>ADDRESS_4</field>
-      <nameMapping>Tipo de vía</nameMapping>
-      <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
     <addressComponent>
-      <field>ADDRESS_1</field>
-      <nameMapping>Nombre de vía</nameMapping>
+      <field>City_village</field>
+      <nameMapping>Comuna</nameMapping>
       <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
     <addressComponent>
       <field>ADDRESS_2</field>
-      <nameMapping>Número</nameMapping>
+      <nameMapping>Localidad</nameMapping>
       <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
     <addressComponent>
-      <field>ADDRESS_3</field>
-      <nameMapping>Complemento</nameMapping>
-      <sizeMapping>80</sizeMapping>
-      <requiredInHierarchy>false</requiredInHierarchy>
-    </addressComponent>
-    <addressComponent>
-      <field>POSTAL_CODE</field>
-      <nameMapping>Código postal</nameMapping>
-      <sizeMapping>12</sizeMapping>
+      <field>ADDRESS_1</field>
+      <nameMapping>Dirección</nameMapping>
+      <sizeMapping>40</sizeMapping>
       <requiredInHierarchy>false</requiredInHierarchy>
     </addressComponent>
   </addressComponents>

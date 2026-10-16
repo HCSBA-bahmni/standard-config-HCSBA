@@ -73,6 +73,40 @@
       "version": "1",
       "referenceVersion": null,
       "referenceFormUuid": null
+    },
+    {
+      "locale": "es",
+      "labels": {
+        "LABEL_13": "Nota: guarde el formulario de segundos signos vitales para registrar las observaciones."
+      },
+      "concepts": {
+        "SYSTOLIC_BLOOD_PRESSURE_20": "Presion arterial sistolica",
+        "ARTERIAL_BLOOD_OXYGEN_SATURATION_(PULSE_OXIMETER)_15_DESC": "Saturacion de oxigeno medida con un oximetro periferico.",
+        "SYSTOLIC_BLOOD_PRESSURE_20_DESC": "La medicion de la presion arterial sistolica del paciente (tomada con un manguito manual en posicion sentada o de pie)",
+        "TEMPERATURE_18_DESC": "Temperatura del paciente en Fahrenheit",
+        "PULSE_14_DESC": "Frecuencia del pulso del paciente, medida con un oximetro periferico.",
+        "FOWLER'S_POSITION_22": "Posicion de Fowler",
+        "UNKNOWN_22": "Desconocido",
+        "RECUMBENT_22": "recostado",
+        "BODY_POSITION_22": "Posicion corporal",
+        "TEMPERATURE_18": "Temperatura",
+        "DIASTOLIC_BLOOD_PRESSURE_21_DESC": "La medicion de la presion arterial diastolica del paciente (tomada con un manguito manual en posicion sentada o de pie)",
+        "RESPIRATORY_RATE_16_DESC": "Frecuencia respiratoria medida en respiraciones por minuto",
+        "STANDING_22": "de pie",
+        "DIASTOLIC_BLOOD_PRESSURE_21": "Presion arterial diastolica",
+        "SITTING_22": "sentado",
+        "OTHER_22": "Otro",
+        "RESPIRATORY_RATE_16": "Frecuencia respiratoria",
+        "BODY_POSITION_22_DESC": "Posicion corporal para procedimiento o medicion de presion arterial",
+        "PULSE_14": "Pulso",
+        "BLOOD_PRESSURE_19": "Presion arterial",
+        "ARTERIAL_BLOOD_OXYGEN_SATURATION_(PULSE_OXIMETER)_15": "Saturacion arterial de oxigeno (oximetro de pulso)"
+      },
+      "formName": "Segundos signos vitales",
+      "formUuid": null,
+      "version": "1",
+      "referenceVersion": null,
+      "referenceFormUuid": null
     }
   ]
 }

@@ -28,6 +28,21 @@
       "version": "1",
       "referenceVersion": null,
       "referenceFormUuid": null
+    },
+    {
+      "locale": "es",
+      "labels": {
+        "LABEL_3": "Nota: vaya a la seccion de impresion en el panel del paciente para imprimir los certificados."
+      },
+      "concepts": {
+        "REST_DURATION_2": "Duracion del reposo",
+        "TREATMENT_PLAN_1": "Plan de tratamiento"
+      },
+      "formName": "Certificado de tratamiento y aptitud",
+      "formUuid": null,
+      "version": "1",
+      "referenceVersion": null,
+      "referenceFormUuid": null
     }
   ]
 }

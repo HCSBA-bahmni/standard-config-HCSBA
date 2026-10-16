@@ -29,6 +29,22 @@
       "version": "1",
       "referenceVersion": null,
       "referenceFormUuid": null
+    },
+    {
+      "locale": "es",
+      "labels": {
+        "LABEL_4": "Nota: vaya a la seccion de impresion en el panel del paciente para imprimir los certificados."
+      },
+      "concepts": {
+        "REFERRING_TO_HOSPITAL_1": "Hospital de referencia",
+        "COMMENTS_5": "Comentarios",
+        "REFERRED_TO_DOCTOR_9": "Medico remitente"
+      },
+      "formName": "Carta de admision",
+      "formUuid": null,
+      "version": "1",
+      "referenceVersion": null,
+      "referenceFormUuid": null
     }
   ]
 }

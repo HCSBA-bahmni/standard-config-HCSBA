@@ -271,5 +271,11 @@
   "TELECONSULTATION_APPOINTMENT_BOOKING_MESSAGE": "Una cita de teleconsulta para #patientName, #patientId en #dateTime para #service está reservada en #clinicName. Por favor, haga clic en el enlace #meetingLink en #dateTime para unirse a la consulta. Para cualquier duda, llámenos al #helpDeskNumber.",
   "PROVIDERS": "Proveedores",
   "LOCATIONS": "Ubicaciones",
-  "SPECIALITIES": "Especialidades"
+  "SPECIALITIES": "Especialidades",
+  "TELECONSULTATION_APPOINTMENT": "Teleconsulta",
+  "REGULAR_APPOINTMENT_LABEL": "Cita regular",
+  "CHOOSE_AN_OPTION_LABEL": "Elige una opción",
+  "DROPDOWN_TYPE_TO_SEARCH_MESSAGE": "Escriba para buscar",
+  "PLACEHOLDER_APPOINTMENT_CREATE_SEARCH_LOCATION": "Ubicación"
+
 }

@@ -137,7 +137,7 @@
     "translationKey": "MODULE_LABEL_LAB_ENTRY_KEY",
     "url": "/lab",
     "icon": "fa fa-flask",
-    "order": 15,
+    "order": 16,
     "requiredPrivilege": "app:lab-lite"
   }
 }
