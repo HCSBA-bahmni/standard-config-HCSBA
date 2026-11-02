@@ -56,6 +56,12 @@
   },
   "sections": [
     {
+      "title": "Pabellón hospitalario (QA)",
+      "componentKey": "PB",
+      "displayOrder": 0,
+      "source": "qa-isolated"
+    },
+    {
       "title": "Vitals and Nutritional Values",
       "componentKey": "VT",
       "displayOrder": 1,
