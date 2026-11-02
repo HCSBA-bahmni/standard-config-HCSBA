@@ -588,5 +588,20 @@
                 }
             }
         }
+    },
+    "pabellonHospitalario": {
+        "translationKey": "DASHBOARD_TAB_PABELLON_HOSPITALARIO_QA_KEY",
+        "displayByDefault": true,
+        "sections": {
+            "pabellonHospitalarioQA": {
+                "type": "pabellonHospitalario",
+                "translationKey": "DASHBOARD_TITLE_PABELLON_HOSPITALARIO_QA_KEY",
+                "displayType": "Full-Page",
+                "displayOrder": 0,
+                "requiredPrivilege": "app:clinical",
+                "hideEmptyDisplayControl": false,
+                "config": { "source": "qa-isolated" }
+            }
+        }
     }
 }
