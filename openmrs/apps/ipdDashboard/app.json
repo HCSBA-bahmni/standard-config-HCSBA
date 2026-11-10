@@ -56,10 +56,10 @@
   },
   "sections": [
     {
-      "title": "Pabellón hospitalario (QA)",
+      "title": "Pabellón hospitalario (DEV)",
       "componentKey": "PB",
       "displayOrder": 0,
-      "source": "qa-isolated"
+      "source": "pabellon43-dev"
     },
     {
       "title": "Vitals and Nutritional Values",
