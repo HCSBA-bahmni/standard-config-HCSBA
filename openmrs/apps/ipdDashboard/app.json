@@ -56,6 +56,12 @@
   },
   "sections": [
     {
+      "title": "Pabellón hospitalario (DEV)",
+      "componentKey": "PB",
+      "displayOrder": 0,
+      "source": "pabellon43-dev"
+    },
+    {
       "title": "Vitals and Nutritional Values",
       "componentKey": "VT",
       "displayOrder": 1,
