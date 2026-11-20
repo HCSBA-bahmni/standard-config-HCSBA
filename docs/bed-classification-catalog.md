@@ -47,6 +47,28 @@ La reversión del frontend conserva estas etiquetas y sus asociaciones. No se
 incluye un `DOWN` destructivo ni se borran filas/ledger para hacer pasar pruebas.
 No se afirma aplicación de esta revisión en `.225` por publicar el PR.
 
+### Aplicación dirigida verificada en `.225`
+
+El 20-11-2026 se verificaron MySQL 8.0.46, Liquibase 4.4.3 e Initializer 2.7.0.
+El historial nativo se llama `liquibasechangelog`, y su bloqueo,
+`liquibasechangeloglock`. El CLI usa otros nombres por defecto: fijar
+`databaseChangeLogTableName=liquibasechangelog` y
+`databaseChangeLogLockTableName=liquibasechangeloglock` en el archivo privado de
+opciones. Conservar `configuration/liquibase/hcsba_bed_classification.xml` como
+nombre de changelog, relativo a `/openmrs/data`.
+
+Usar un classpath acotado de Liquibase, driver JDBC y dependencias. Incluir todos
+los JAR de OpenMRS introduce una extensión SLF4J incompatible con el logger del
+CLI. Cargar URL y credenciales desde el mecanismo privado, sin publicarlas en
+argumentos, Git ni registros. Antes de recuperar un fallo, releer ambos historiales
+y comprobar los valores existentes; un error del ejecutor no demuestra rollback.
+
+La entrega conservó los UUID y las filas previas de camas, tipos, etiquetas y
+asociaciones. Registró 12 changesets en el historial nativo; la segunda aplicación
+no modificó datos. El ensayo de UI utilizó dos camas sin pacientes y conservó su
+auditoría mediante las anulaciones/retiros nativos, sin purgar historia. Estas
+comprobaciones corresponden a esa entrega, no acreditan otro ambiente.
+
 ## Prueba reproducible
 
 `scripts/test-bed-classification-mysql.py` utiliza MySQL real y Liquibase, en
