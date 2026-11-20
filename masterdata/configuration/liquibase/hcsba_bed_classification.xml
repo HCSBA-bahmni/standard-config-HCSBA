@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+ <!-- Metadata only. Preserve existing UUIDs, descriptions and bed_tag_map rows.
+      No conversion of legacy bed types, no bed creation, no clinical writes. -->
+ <changeSet id="hcsba-bed-classification-v1-adult-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Clasificación: Adulto' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Clasificación: Adulto')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Clasificación: Adulto'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='0d34958b-3f80-5f77-af15-902b1d238ad4' AND BINARY name&lt;&gt;BINARY 'Clasificación: Adulto'</sqlCheck>
+  </preConditions>
+  <comment>Clasificación: Adulto: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Clasificación: Adulto', 1, CURRENT_TIMESTAMP, 0, '0d34958b-3f80-5f77-af15-902b1d238ad4'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Clasificación: Adulto');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama destinada a pacientes adultos.', 'Descripción administrativa de etiqueta de cama', '311436d0-ce7a-55b8-af30-27d9ab71bcbc'
+FROM bed_tag t WHERE t.name='Clasificación: Adulto' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-pediatric-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Clasificación: Pediátrica' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Clasificación: Pediátrica')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Clasificación: Pediátrica'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='f57cf178-b3d2-55d5-9c4f-43d0215555f0' AND BINARY name&lt;&gt;BINARY 'Clasificación: Pediátrica'</sqlCheck>
+  </preConditions>
+  <comment>Clasificación: Pediátrica: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Clasificación: Pediátrica', 1, CURRENT_TIMESTAMP, 0, 'f57cf178-b3d2-55d5-9c4f-43d0215555f0'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Clasificación: Pediátrica');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama destinada a pacientes pediátricos.', 'Descripción administrativa de etiqueta de cama', 'c4ad0da5-b2d0-5f01-af40-c6f3b36ceb63'
+FROM bed_tag t WHERE t.name='Clasificación: Pediátrica' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-neonatal-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Clasificación: Neonatal' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Clasificación: Neonatal')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Clasificación: Neonatal'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='2f544dc9-3e6a-57b6-834f-d857a8fd8084' AND BINARY name&lt;&gt;BINARY 'Clasificación: Neonatal'</sqlCheck>
+  </preConditions>
+  <comment>Clasificación: Neonatal: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Clasificación: Neonatal', 1, CURRENT_TIMESTAMP, 0, '2f544dc9-3e6a-57b6-834f-d857a8fd8084'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Clasificación: Neonatal');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama destinada a pacientes neonatales.', 'Descripción administrativa de etiqueta de cama', '38c197f2-2476-549d-aeb1-85b92042d94f'
+FROM bed_tag t WHERE t.name='Clasificación: Neonatal' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-mental-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Uso: Salud Mental' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Uso: Salud Mental')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Uso: Salud Mental'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='e63c5ca1-0a28-599c-b6be-af79f49d000c' AND BINARY name&lt;&gt;BINARY 'Uso: Salud Mental'</sqlCheck>
+  </preConditions>
+  <comment>Uso: Salud Mental: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Uso: Salud Mental', 1, CURRENT_TIMESTAMP, 0, 'e63c5ca1-0a28-599c-b6be-af79f49d000c'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Uso: Salud Mental');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama destinada a atención de salud mental.', 'Descripción administrativa de etiqueta de cama', '9fe5c9d2-70d5-5858-ab33-d761648af4e3'
+FROM bed_tag t WHERE t.name='Uso: Salud Mental' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-obstetric-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Uso: Obstetricia' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Uso: Obstetricia')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Uso: Obstetricia'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='285a23a9-dba8-5f79-96f8-69e1db52a5e2' AND BINARY name&lt;&gt;BINARY 'Uso: Obstetricia'</sqlCheck>
+  </preConditions>
+  <comment>Uso: Obstetricia: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Uso: Obstetricia', 1, CURRENT_TIMESTAMP, 0, '285a23a9-dba8-5f79-96f8-69e1db52a5e2'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Uso: Obstetricia');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama destinada a atención obstétrica o ginecológica.', 'Descripción administrativa de etiqueta de cama', 'f9699101-96fc-5af5-8ce0-a4eca8bcd3c0'
+FROM bed_tag t WHERE t.name='Uso: Obstetricia' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-palliative-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Uso: Cuidados Paliativos' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Uso: Cuidados Paliativos')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Uso: Cuidados Paliativos'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='280a55ef-439b-5012-8444-64068a80d394' AND BINARY name&lt;&gt;BINARY 'Uso: Cuidados Paliativos'</sqlCheck>
+  </preConditions>
+  <comment>Uso: Cuidados Paliativos: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Uso: Cuidados Paliativos', 1, CURRENT_TIMESTAMP, 0, '280a55ef-439b-5012-8444-64068a80d394'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Uso: Cuidados Paliativos');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama destinada a una unidad de cuidados paliativos.', 'Descripción administrativa de etiqueta de cama', '0bec3a22-1002-5768-90d1-4259d6803d7f'
+FROM bed_tag t WHERE t.name='Uso: Cuidados Paliativos' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-designed-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Condición: Dotacional' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Condición: Dotacional')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Condición: Dotacional'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='36824b27-1556-5c12-93dc-5d7329c143eb' AND BINARY name&lt;&gt;BINARY 'Condición: Dotacional'</sqlCheck>
+  </preConditions>
+  <comment>Condición: Dotacional: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Condición: Dotacional', 1, CURRENT_TIMESTAMP, 0, '36824b27-1556-5c12-93dc-5d7329c143eb'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Condición: Dotacional');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Capacidad física autorizada de la unidad.', 'Descripción administrativa de etiqueta de cama', 'c5ee4834-c6b8-5076-8701-8d97602f3cf3'
+FROM bed_tag t WHERE t.name='Condición: Dotacional' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedOperationalCondition.',t.uuid), '{"description":"Capacidad física autorizada de la unidad.","active":true}', 'Clasificación administrativa; bloqueo mediante estado nativo de cama', '0394aa9b-2557-5727-b853-8f80e8aa550b'
+FROM bed_tag t WHERE t.name='Condición: Dotacional' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedOperationalCondition.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-enabled-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Condición: Habilitada' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Condición: Habilitada')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Condición: Habilitada'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='8447a830-3950-5e2d-b432-1c192f9f83b4' AND BINARY name&lt;&gt;BINARY 'Condición: Habilitada'</sqlCheck>
+  </preConditions>
+  <comment>Condición: Habilitada: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Condición: Habilitada', 1, CURRENT_TIMESTAMP, 0, '8447a830-3950-5e2d-b432-1c192f9f83b4'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Condición: Habilitada');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama instalada y con personal asignado para funcionar.', 'Descripción administrativa de etiqueta de cama', '7fcbc40f-3408-5dc8-8f49-95c585e06ea0'
+FROM bed_tag t WHERE t.name='Condición: Habilitada' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedOperationalCondition.',t.uuid), '{"description":"Cama instalada y con personal asignado para funcionar.","active":true}', 'Clasificación administrativa; bloqueo mediante estado nativo de cama', '997dcf0a-5017-5ce1-83ab-dcab6a8e7ffd'
+FROM bed_tag t WHERE t.name='Condición: Habilitada' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedOperationalCondition.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-critical-uti-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Complejidad: Crítica UTI' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Complejidad: Crítica UTI')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Complejidad: Crítica UTI'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='d2e02ee6-c396-5b1d-b605-38754fac28b4' AND BINARY name&lt;&gt;BINARY 'Complejidad: Crítica UTI'</sqlCheck>
+  </preConditions>
+  <comment>Complejidad: Crítica UTI: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Complejidad: Crítica UTI', 1, CURRENT_TIMESTAMP, 0, 'd2e02ee6-c396-5b1d-b605-38754fac28b4'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Complejidad: Crítica UTI');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama crítica de tratamiento intermedio.', 'Descripción administrativa de etiqueta de cama', 'f6aaf3b9-5ee1-5791-83df-0892b77fa058'
+FROM bed_tag t WHERE t.name='Complejidad: Crítica UTI' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-critical-uci-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Complejidad: Crítica UCI' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Complejidad: Crítica UCI')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Complejidad: Crítica UCI'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='80309f36-3100-53be-94a9-92b482fe80a0' AND BINARY name&lt;&gt;BINARY 'Complejidad: Crítica UCI'</sqlCheck>
+  </preConditions>
+  <comment>Complejidad: Crítica UCI: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Complejidad: Crítica UCI', 1, CURRENT_TIMESTAMP, 0, '80309f36-3100-53be-94a9-92b482fe80a0'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Complejidad: Crítica UCI');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama crítica de cuidados intensivos.', 'Descripción administrativa de etiqueta de cama', '949e1041-6432-569f-84ae-6b4f06bfd5ee'
+FROM bed_tag t WHERE t.name='Complejidad: Crítica UCI' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-medium-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Complejidad: Media' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Complejidad: Media')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Complejidad: Media'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='f0cdb35a-4831-51b6-b6c4-e6c517676021' AND BINARY name&lt;&gt;BINARY 'Complejidad: Media'</sqlCheck>
+  </preConditions>
+  <comment>Complejidad: Media: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Complejidad: Media', 1, CURRENT_TIMESTAMP, 0, 'f0cdb35a-4831-51b6-b6c4-e6c517676021'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Complejidad: Media');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama de mediana complejidad.', 'Descripción administrativa de etiqueta de cama', 'a881a57d-6410-5339-bc32-1c8702d7fd41'
+FROM bed_tag t WHERE t.name='Complejidad: Media' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+  ]]></sql>
+ </changeSet>
+ <changeSet id="hcsba-bed-classification-v1-basic-20261120" author="HCSBA">
+  <preConditions onFail="HALT" onError="HALT">
+   <or><dbms type="mysql"/><dbms type="mariadb"/></or>
+   <tableExists tableName="bed_tag"/><tableExists tableName="global_property"/>
+   <sqlCheck expectedResult="1">SELECT COUNT(*) FROM users WHERE user_id=1</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE name='Complejidad: Básica' AND (voided&lt;&gt;0 OR BINARY name&lt;&gt;BINARY 'Complejidad: Básica')</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT CASE WHEN COUNT(*)&gt;1 THEN 1 ELSE 0 END FROM bed_tag WHERE name='Complejidad: Básica'</sqlCheck>
+   <sqlCheck expectedResult="0">SELECT COUNT(*) FROM bed_tag WHERE uuid='85b6f8de-76d8-5311-8a3a-2f5e8c3f3105' AND BINARY name&lt;&gt;BINARY 'Complejidad: Básica'</sqlCheck>
+  </preConditions>
+  <comment>Complejidad: Básica: crear sólo si falta; conservar UUID y personalizaciones previas</comment>
+  <sql splitStatements="true"><![CDATA[
+INSERT INTO bed_tag (name, creator, date_created, voided, uuid)
+SELECT 'Complejidad: Básica', 1, CURRENT_TIMESTAMP, 0, '85b6f8de-76d8-5311-8a3a-2f5e8c3f3105'
+WHERE NOT EXISTS (SELECT 1 FROM bed_tag WHERE name='Complejidad: Básica');
+INSERT INTO global_property (property, property_value, description, uuid)
+SELECT CONCAT('hcsba.bedTag.description.',t.uuid), 'Cama de baja complejidad.', 'Descripción administrativa de etiqueta de cama', 'f824cb86-1439-56d6-bce3-b4181e366601'
+FROM bed_tag t WHERE t.name='Complejidad: Básica' AND t.voided=0
+AND NOT EXISTS (SELECT 1 FROM global_property gp WHERE gp.property=CONCAT('hcsba.bedTag.description.',t.uuid));
+  ]]></sql>
+ </changeSet>
+</databaseChangeLog>
