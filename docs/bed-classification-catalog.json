@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "tags": [
+    {
+      "key": "adult",
+      "name": "Clasificación: Adulto",
+      "description": "Cama destinada a pacientes adultos.",
+      "uuid": "0d34958b-3f80-5f77-af15-902b1d238ad4"
+    },
+    {
+      "key": "pediatric",
+      "name": "Clasificación: Pediátrica",
+      "description": "Cama destinada a pacientes pediátricos.",
+      "uuid": "f57cf178-b3d2-55d5-9c4f-43d0215555f0"
+    },
+    {
+      "key": "neonatal",
+      "name": "Clasificación: Neonatal",
+      "description": "Cama destinada a pacientes neonatales.",
+      "uuid": "2f544dc9-3e6a-57b6-834f-d857a8fd8084"
+    },
+    {
+      "key": "mental",
+      "name": "Uso: Salud Mental",
+      "description": "Cama destinada a atención de salud mental.",
+      "uuid": "e63c5ca1-0a28-599c-b6be-af79f49d000c"
+    },
+    {
+      "key": "obstetric",
+      "name": "Uso: Obstetricia",
+      "description": "Cama destinada a atención obstétrica o ginecológica.",
+      "uuid": "285a23a9-dba8-5f79-96f8-69e1db52a5e2"
+    },
+    {
+      "key": "palliative",
+      "name": "Uso: Cuidados Paliativos",
+      "description": "Cama destinada a una unidad de cuidados paliativos.",
+      "uuid": "280a55ef-439b-5012-8444-64068a80d394"
+    },
+    {
+      "key": "designed",
+      "name": "Condición: Dotacional",
+      "description": "Capacidad física autorizada de la unidad.",
+      "uuid": "36824b27-1556-5c12-93dc-5d7329c143eb"
+    },
+    {
+      "key": "enabled",
+      "name": "Condición: Habilitada",
+      "description": "Cama instalada y con personal asignado para funcionar.",
+      "uuid": "8447a830-3950-5e2d-b432-1c192f9f83b4"
+    },
+    {
+      "key": "critical-uti",
+      "name": "Complejidad: Crítica UTI",
+      "description": "Cama crítica de tratamiento intermedio.",
+      "uuid": "d2e02ee6-c396-5b1d-b605-38754fac28b4"
+    },
+    {
+      "key": "critical-uci",
+      "name": "Complejidad: Crítica UCI",
+      "description": "Cama crítica de cuidados intensivos.",
+      "uuid": "80309f36-3100-53be-94a9-92b482fe80a0"
+    },
+    {
+      "key": "medium",
+      "name": "Complejidad: Media",
+      "description": "Cama de mediana complejidad.",
+      "uuid": "f0cdb35a-4831-51b6-b6c4-e6c517676021"
+    },
+    {
+      "key": "basic",
+      "name": "Complejidad: Básica",
+      "description": "Cama de baja complejidad.",
+      "uuid": "85b6f8de-76d8-5311-8a3a-2f5e8c3f3105"
+    }
+  ]
+}
