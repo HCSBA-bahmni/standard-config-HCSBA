@@ -79,3 +79,7 @@ External id: 162244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 UUID de concepto en el JSON v6: 5719174
 UUID del nombre ES (ConceptName): 19137250
 ese es un ejemplo
+
+## QA compartido del HIS HCSBA
+
+El paquete [his-qa-release](skills/his-qa-release/SKILL.md) incluye el flujo PRE/POST, referencias y plantillas para QA de desarrollos y entregas a `.225`. Consultar la [guía para contribuyentes](skills/his-qa-release/references/contributors.md) para instalar la skill completa y ejecutar el harness mantenido en `bahmni-nextjs-hcsba`. Conservar informes y datos de prueba en una carpeta privada fuera de Git.
